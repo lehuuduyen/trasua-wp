@@ -1,0 +1,295 @@
+@import url('common.css');
+
+/*------------------------------ Nav ------------------------------*/
+.nav-tabs {
+  float: left;
+  width: 100%;
+  margin: 0;
+  list-style-type: none;
+  border-bottom: 1px solid transparent;
+}
+
+.nav-tabs > li {
+  float: left;
+  margin-bottom: -1px;
+}
+
+.nav-tabs > li > a {
+  margin-right: 2px;
+  line-height: 1.5;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+  float: left;
+  text-decoration: none;
+}
+
+.nav-tabs > li > a:hover {
+  border-color: #eee #eee #ddd;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: #555;
+  cursor: default;
+  background-color: white;
+  box-shadow: none;
+  font-weight: bold;
+}
+
+.tab-content > .tab-pane {
+  float: left;
+  width: 100%;
+  display: none;
+  overflow: auto;
+}
+
+.tab-content > .tab-pane > table {
+  min-width: 600px;
+}
+
+.tab-content > .tab-pane.active {
+  display: block;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 5px 4px -2px rgba(0, 0, 0, 0.15);
+}
+
+/*------------------------------ Pagination ------------------------------*/
+.pagination {
+  display: flex;
+  justify-content: end;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.pagination a {
+  max-width: 30px;
+  min-height: 30px !important;
+  max-height: 30px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination a.active {
+  color: white !important;
+  background-color: var(--primary) !important;
+}
+
+/*------------------------------ Actions ------------------------------*/
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.actions .button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.table-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.table-actions span {
+  color: var(--primary);
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  font-size: 18px !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: unset;
+}
+
+/*------------------------------ Modal ------------------------------*/
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  opacity: .7;
+  z-index: 9998;
+}
+
+.modal {
+  background-color: white;
+  width: 84%;
+  min-width: 650px;
+  min-height: 300px;
+  overflow: hidden;
+  position: fixed;
+  top: 60px;
+  bottom: 40px;
+  left: 8%;
+  z-index: 9999;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.modal-delete {
+  width: 40%;
+  min-width: 300px;
+  min-height: 200px;
+  left: 30%;
+  top: 80px;
+  bottom: unset;
+}
+
+.modal .modal-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+}
+
+.modal .close {
+  position: absolute;
+  top: 6px;
+  right: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: unset;
+  cursor: pointer;
+}
+
+.modal .modal-header p {
+  margin: unset;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.modal .modal-content {
+  padding: 20px;
+  padding-top: 0;
+}
+
+.modal .modal-content .steps {
+  margin: unset;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.steps li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.steps li.active .step-number {
+  display: none;
+}
+
+.steps li.active .check {
+  display: block;
+  background-color: rgb(233 30 99 / 37%);
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.steps li.current .step-number {
+  background-color: var(--primary);
+  color: white;
+}
+
+.steps li.active .step-title::after {
+  background-color: var(--secondary);
+}
+
+.steps .step-title {
+  position: relative;
+  line-height: 32px;
+  padding-inline-end: 8px;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.steps .step-title::after {
+  position: absolute;
+  background-color: var(--primary);
+  top: 16px;
+  inset-inline-start: 100%;
+  display: block;
+  width: 9999px;
+  height: 1px;
+  content: "";
+}
+
+.steps .step-number {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  min-height: unset;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.steps .check {
+  display: none;
+  color: var(--secondary);
+}
+
+.steps p {
+  margin: unset;
+}
+
+.step-content {
+  border: 1px solid #ddd;
+  border-style: dashed;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.step-content hr {
+  margin: unset;
+}
+
+.step-content-header, .step-content-content {
+  padding: 12px;
+  padding-top: 0;
+}
+
+.step-content-content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  overflow: auto;
+  max-height: 450px;
+}
+
+.image-wrapper img {
+  max-width: 100%;
+}
+
+.modal-actions {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+#deleteList span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 930px) {
+  .step-content-content .regular-text {
+    width: 100%;
+  }
+}

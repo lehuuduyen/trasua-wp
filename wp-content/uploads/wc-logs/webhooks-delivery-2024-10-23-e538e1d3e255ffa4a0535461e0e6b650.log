@@ -1,0 +1,60 @@
+2024-10-23T09:12:29+00:00 INFO Array
+(
+    [Webhook Delivery] => Array
+        (
+            [Delivery ID] => 5d35174398f1a466a227635139186ce8
+            [Date] => Oct 23, 2024 @ 9:12
+            [URL] => https://cueichabinhthoi.vbp.app/tai-khoan/
+            [Duration] => 2.24768
+            [Request] => Array
+                (
+                    [Method] => POST
+                    [Headers] => Array
+                        (
+                            [User-Agent] => WooCommerce/8.7.0 Hookshot (WordPress/6.4.2)
+                            [Content-Type] => application/json
+                            [X-WC-Webhook-Source] => https://coffee.getlinktraffic.io.vn/
+                            [X-WC-Webhook-Topic] => product.created
+                            [X-WC-Webhook-Resource] => product
+                            [X-WC-Webhook-Event] => created
+                            [X-WC-Webhook-Signature] => JNo6z5LO6EG+ygcRXTA4NtGmT8kIT25kVQ//LG/cBmo=
+                            [X-WC-Webhook-ID] => 1
+                            [X-WC-Webhook-Delivery-ID] => 5d35174398f1a466a227635139186ce8
+                        )
+
+                )
+
+            [Body] => Webhook body is not logged unless WP_DEBUG mode is turned on. This is to avoid the storing of personal data in the logs.
+            [Response] => Array
+                (
+                    [Code] => 200
+                    [Message] => OK
+                    [Headers] => WpOrg\Requests\Utility\CaseInsensitiveDictionary Object
+                        (
+                            [data:protected] => Array
+                                (
+                                    [date] => Wed, 23 Oct 2024 09:12:29 GMT
+                                    [content-type] => text/html; charset=UTF-8
+                                    [expires] => Wed, 11 Jan 1984 05:00:00 GMT
+                                    [cache-control] => no-cache, must-revalidate, max-age=0
+                                    [x-frame-options] => SAMEORIGIN
+                                    [link] => <https://cueichabinhthoi.vbp.app/wp-json/>; rel="https://api.w.org/", <https://cueichabinhthoi.vbp.app/wp-json/wp/v2/pages/13>; rel="alternate"; type="application/json", <https://cueichabinhthoi.vbp.app/?p=13>; rel=shortlink
+                                    [vary] => Accept-Encoding,User-Agent
+                                    [cf-cache-status] => DYNAMIC
+                                    [report-to] => {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=kkru7D4MJIw0YXNOOkG4FhMaC1ppFHIzIM1tT3v%2FSt%2FmJVWoyOBKDw9rnlNa7FqgEPLwCQsEidVc%2FOCvnA%2BDyzgk65EJAT9saNFuYkhJmjzUPi%2BLVcu%2BZT9cZciUoa93bl6kjqNQNR9AakOhaDDmyKGO09sdbQ%3D%3D"}],"group":"cf-nel","max_age":604800}
+                                    [nel] => {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+                                    [server] => cloudflare
+                                    [cf-ray] => 8d709b06dd75797a-SIN
+                                    [content-encoding] => gzip
+                                    [alt-svc] => h3=":443"; ma=86400
+                                    [server-timing] => cfL4;desc="?proto=TCP&rtt=1817&sent=6&recv=9&lost=0&retrans=0&sent_bytes=2838&recv_bytes=3830&delivery_rate=2888571&cwnd=253&unsent_bytes=0&cid=dfaa00f42c119222&ts=1543&x=0"
+                                )
+
+                        )
+
+                    [Body] => Webhook body is not logged unless WP_DEBUG mode is turned on. This is to avoid the storing of personal data in the logs.
+                )
+
+        )
+
+)
