@@ -68,7 +68,7 @@ else : // Show login/register link.
 		'class'      => [ 'nav-top-link', 'nav-top-not-logged-in', get_flatsome_icon_class( $icon_style, 'small' ) ],
 		'title'      => esc_attr__( 'Login', 'woocommerce' ),
 		'aria-label' => ! $header_account_title ? esc_attr__( 'Login', 'woocommerce' ) : null,
-		'data-open'  => ( get_theme_mod( 'account_login_style', 'lightbox' ) == 'lightbox' && ! is_checkout() && ! is_account_page() ) ? '#login-form-popup' : null,
+		// 'data-open'  => ( get_theme_mod( 'account_login_style', 'lightbox' ) == 'lightbox' && ! is_checkout() && ! is_account_page() ) ? '#login-form-popup' : null,
 	];
 
 	if ( $icon_style && $icon_style !== 'image' ) {

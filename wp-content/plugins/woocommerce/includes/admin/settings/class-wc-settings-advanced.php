@@ -268,7 +268,22 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 					'default'  => 'downloads',
 					'desc_tip' => true,
 				),
-
+				array(
+					'title'    => __( 'point', 'woocommerce' ),
+					'desc'     => __( 'Endpoint for the "My account &rarr; point" page.', 'woocommerce' ),
+					'id'       => 'woocommerce_myaccount_point_endpoint',
+					'type'     => 'text',
+					'default'  => 'point',
+					'desc_tip' => true,
+				),
+				array(
+					'title'    => __( 'affilate', 'woocommerce' ),
+					'desc'     => __( 'Endpoint for the "My account &rarr; affilate" page.', 'woocommerce' ),
+					'id'       => 'woocommerce_myaccount_affilate_endpoint',
+					'type'     => 'text',
+					'default'  => 'affilate',
+					'desc_tip' => true,
+				),
 				array(
 					'title'    => __( 'Edit account', 'woocommerce' ),
 					'desc'     => __( 'Endpoint for the "My account &rarr; Edit account" page.', 'woocommerce' ),

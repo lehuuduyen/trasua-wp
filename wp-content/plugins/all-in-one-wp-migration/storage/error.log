@@ -1,3 +1,312 @@
 Oct 30 2024 17:00:51
 {"type":2,"message":"is_readable(): open_basedir restriction in effect. File(\/dev\/urandom) is not within the allowed path(s): (\/www\/wwwroot\/trasua\/:\/tmp\/)","file":"\/www\/wwwroot\/trasua\/wp-includes\/class-phpass.php","line":73}
 
+Oct 31 2024 04:47:31
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:47:36
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:47:40
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:47:44
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:47:48
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:47:53
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:47:58
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:48:02
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:48:06
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:48:10
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:48:14
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:48:18
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:48:23
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:48:27
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:48:31
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:48:35
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:48:39
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:48:43
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:48:47
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:48:52
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:48:57
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:49:01
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:49:05
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:49:09
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:49:14
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:49:18
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:49:22
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:49:26
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:49:30
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:49:35
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:49:39
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:49:43
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:49:47
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:49:51
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:49:57
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:50:01
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:50:05
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:50:09
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:50:13
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:50:17
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:50:21
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:50:41
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:50:45
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:51:00
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:51:18
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:51:36
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:51:57
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:52:12
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:52:20
+{"Number":8,"Message":"fwrite(): Write of 560 bytes failed with errno=13 Permission denied","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\all-in-one-wp-migration\\lib\\vendor\\servmask\\archiver\\class-ai1wm-extractor.php","Line":444}
+
+Oct 31 2024 04:52:25
+{"type":8,"message":"unserialize(): Error at offset 0 of 514 bytes","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\vendor\\wordfence\\wf-waf\\src\\lib\\storage\\file.php","line":622}
+
+Oct 31 2024 04:52:30
+{"type":8192,"message":"Return type of Ai1wm_Recursive_Newline_Filter::accept() should either be compatible with FilterIterator::accept(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\all-in-one-wp-migration\\lib\\vendor\\servmask\\filter\\class-ai1wm-recursive-newline-filter.php","line":28}
+
+Oct 31 2024 04:52:34
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:34
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:34
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:34
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:34
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:34
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:34
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:34
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:34
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:34
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:34
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:34
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:34
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:34
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:34
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:34
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:34
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:34
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:34
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:34
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:34
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:34
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:34
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:34
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:44
+{"type":8192,"message":"Return type of Ai1wm_Recursive_Newline_Filter::accept() should either be compatible with FilterIterator::accept(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\all-in-one-wp-migration\\lib\\vendor\\servmask\\filter\\class-ai1wm-recursive-newline-filter.php","line":28}
+
+Oct 31 2024 04:52:45
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:45
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:45
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:45
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:45
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:45
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:45
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:45
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:45
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:45
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:45
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:45
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:45
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:45
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:45
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:45
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:45
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:45
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:45
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:45
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:45
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:45
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:45
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:45
+{"Number":8192,"Message":"rtrim(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-includes\\formatting.php","Line":2831}
+
+Oct 31 2024 04:52:47
+{"type":8192,"message":"Return type of Ai1wm_Recursive_Newline_Filter::accept() should either be compatible with FilterIterator::accept(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\all-in-one-wp-migration\\lib\\vendor\\servmask\\filter\\class-ai1wm-recursive-newline-filter.php","line":28}
+
+Oct 31 2024 04:52:48
+{"type":8192,"message":"Return type of Ai1wm_Recursive_Newline_Filter::accept() should either be compatible with FilterIterator::accept(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\all-in-one-wp-migration\\lib\\vendor\\servmask\\filter\\class-ai1wm-recursive-newline-filter.php","line":28}
+
+Oct 31 2024 04:52:54
+{"type":2,"message":"unlink(C:\\xampp8.1\\htdocs\\trasua-wp\/wp-content\/wflogs\/template.0798415001730350370.tmp): No such file or directory","file":"C:\\xampp8.1\\htdocs\\trasua-wp\\wp-content\\plugins\\wordfence\\lib\\wordfenceClass.php","line":2255}
+

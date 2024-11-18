@@ -8,7 +8,16 @@
   $tableHistory = $wpdb->prefix . 'woo_history_user_point';
 
   $settings = $wpdb->get_results( 'SELECT * FROM ' . $tableSetting . ' ORDER BY id ASC', ARRAY_A );
-
+  if(isset($_POST['submit_doiqua'])){
+    global $wpdb;
+    $prefix = $wpdb->prefix;
+    $userId = $_POST['userId'];
+    $point  = $_POST['point'];
+    $award  = $_POST['award'];
+    $wpdb->query($wpdb->prepare("INSERT INTO ".$prefix."woo_history_user_point (`order_id`, `total_order`, `user_id`, `point`, `minimum_spending`, `points_converted_to_money`, `status`,`award`) VALUES (0,0,'$userId','$point',0,0,2,'$award')"));
+  
+  }
+  
   if (isset($_POST['addRanking'])) {
     for ($i = 0; $i < count($_POST['name']); $i++) {
       $arrayInsert = array(

@@ -68,7 +68,11 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 								/* translators: 1: formatted order total 2: total order items */
 								echo wp_kses_post( sprintf( _n( '%1$s for %2$s item', '%1$s for %2$s items', $item_count, 'woocommerce' ), $order->get_formatted_order_total(), $item_count ) );
 								?>
-
+							<?php elseif ( 'order-point' === $column_id ) : ?>
+								<?php
+								/* translators: 1: formatted order total 2: total order items */
+								echo "<strong style='color:green'>$customer_order->point</strong>";
+								?>
 							<?php elseif ( 'order-actions' === $column_id ) : ?>
 								<?php
 								$actions = wc_get_account_orders_actions( $order );

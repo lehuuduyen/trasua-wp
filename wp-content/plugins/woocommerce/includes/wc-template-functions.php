@@ -3322,6 +3322,23 @@ if ( ! function_exists( 'woocommerce_account_orders' ) ) {
 				)
 			)
 		);
+		foreach($customer_orders->orders as $key => $order){
+			$orderId = $order->id;
+			$status = $order->data['status'];
+			$point = 0;
+			global $wpdb;
+        	$prefix = $wpdb->prefix;
+			
+			if($status == "completed"){
+				$history = $wpdb->get_results("SELECT * FROM ".$prefix."woo_history_user_point WHERE (order_id = '".$orderId."' AND status = '1')");
+				if($history){
+					$point = $history[0]->point;
+				}
+				
+			}
+			$customer_orders->orders[$key]->point = $point;
+			
+		}
 
 		wc_get_template(
 			'myaccount/orders.php',

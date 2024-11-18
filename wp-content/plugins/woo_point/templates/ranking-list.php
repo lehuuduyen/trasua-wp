@@ -120,12 +120,12 @@
             </div>
             <hr />
             <div class="step-content-content flex-center">
-              <div>
+              <div style="display: none;">
                 <h4>Tỉ lệ tích điểm theo chỉ tiêu</h4>
                 <div class="flex-center group-input">
                   <div>
                     <p class="required">Số tiền chi tiêu quy đổi ra 1 điểm</p>
-                    <input type="text" class="regular-text">
+                    <input type="text" value="0" class="regular-text">
                   </div>
                   <div>
                     <p>Điểm quy đổi ra tiền</p>
@@ -336,12 +336,13 @@
           </div>
           <hr />
           <div class="step-content-content" style="display: flex; gap: 20px;">
-            <div>
+            <div style="display: none;">
               <h4>Tỉ lệ tích điểm theo chỉ tiêu</h4>
               <div class="group-input" style="display: flex; gap: 15px;">
                 <div>
                   <p class="required">Số tiền chi tiêu quy đổi ra 1 điểm</p>
-                  <input type="number" class="require-field" onkeyup="handleConvertMoney(this)" name="points_converted_to_money" value="<?php echo count($settings) > 0 ? $settings[0]['points_converted_to_money'] : ''; ?>">
+                  <input type="number" class="require-field" onkeyup="handleConvertMoney(this)" name="points_converted_to_money" value="0">
+                  <!-- //<input type="number" class="require-field" onkeyup="handleConvertMoney(this)" name="points_converted_to_money" value="<?php echo count($settings) > 0 ? $settings[0]['points_converted_to_money'] : ''; ?>"> -->
                   <p class="form-error-text d-none">Đây là trường bắt buộc</p>
                 </div>
                 <div>

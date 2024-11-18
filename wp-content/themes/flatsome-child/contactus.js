@@ -2176,174 +2176,174 @@ var arCuMessageTime = 4000;
 var arCuClosedCookie = 0;
 var arcItems = [];
 
-window.addEventListener('load', function() {
-        arcuOptions = {
+// window.addEventListener('load', function() {
+//         arcuOptions = {
 	    
 		
-		rootElementId: 'arcontactus',
-		credits: false,
-		visible: true,
-		wordpressPluginVersion: '2.2.4',
-		online: true,
-		buttonIcon: '<svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Canvas" transform="translate(-825 -308)"><g id="Vector"><use xlink:href="#path0_fill0123" transform="translate(825 308)" fill="currentColor"></use></g></g><defs><path fill="currentColor" id="path0_fill0123" d="M 19 4L 17 4L 17 13L 4 13L 4 15C 4 15.55 4.45 16 5 16L 16 16L 20 20L 20 5C 20 4.45 19.55 4 19 4ZM 15 10L 15 1C 15 0.45 14.55 0 14 0L 1 0C 0.45 0 0 0.45 0 1L 0 15L 4 11L 14 11C 14.55 11 15 10.55 15 10Z"></path></defs></svg>',
-		layout: 'default',
-		drag: false,
-		mode: 'regular',
-		buttonIconUrl: '',
-		showMenuHeader: true,
-        menuSubheaderText: "",
-		menuHeaderLayout: 'icon-left',
-        menuHeaderTextAlign: 'left',
-		showHeaderCloseBtn: true,
-		headerCloseBtnBgColor: '#1F4681',
-		headerCloseBtnColor: '#FFFFFF',
-		itemsIconType: 'rounded',
-		align: 'right',
-		reCaptcha: false,
-		reCaptchaKey: '',
-		countdown: 0,
-		theme: 'var(--cta-color)',
-		buttonText: false,
-		buttonSize: 'medium',
-		buttonIconSize: 20,
-		menuSize: 'normal',
-		phonePlaceholder: '',
-		callbackSubmitText: '',
-		errorMessage: '',
-		callProcessText: '',
-		callSuccessText: '',
-		callbackFormText: '',
-		iconsAnimationSpeed: 600,
-		iconsAnimationPause: 2000,
-		items: arcItems,
+// 		rootElementId: 'arcontactus',
+// 		credits: false,
+// 		visible: true,
+// 		wordpressPluginVersion: '2.2.4',
+// 		online: true,
+// 		buttonIcon: '<svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Canvas" transform="translate(-825 -308)"><g id="Vector"><use xlink:href="#path0_fill0123" transform="translate(825 308)" fill="currentColor"></use></g></g><defs><path fill="currentColor" id="path0_fill0123" d="M 19 4L 17 4L 17 13L 4 13L 4 15C 4 15.55 4.45 16 5 16L 16 16L 20 20L 20 5C 20 4.45 19.55 4 19 4ZM 15 10L 15 1C 15 0.45 14.55 0 14 0L 1 0C 0.45 0 0 0.45 0 1L 0 15L 4 11L 14 11C 14.55 11 15 10.55 15 10Z"></path></defs></svg>',
+// 		layout: 'default',
+// 		drag: false,
+// 		mode: 'regular',
+// 		buttonIconUrl: '',
+// 		showMenuHeader: true,
+//         menuSubheaderText: "",
+// 		menuHeaderLayout: 'icon-left',
+//         menuHeaderTextAlign: 'left',
+// 		showHeaderCloseBtn: true,
+// 		headerCloseBtnBgColor: '#1F4681',
+// 		headerCloseBtnColor: '#FFFFFF',
+// 		itemsIconType: 'rounded',
+// 		align: 'right',
+// 		reCaptcha: false,
+// 		reCaptchaKey: '',
+// 		countdown: 0,
+// 		theme: 'var(--cta-color)',
+// 		buttonText: false,
+// 		buttonSize: 'medium',
+// 		buttonIconSize: 20,
+// 		menuSize: 'normal',
+// 		phonePlaceholder: '',
+// 		callbackSubmitText: '',
+// 		errorMessage: '',
+// 		callProcessText: '',
+// 		callSuccessText: '',
+// 		callbackFormText: '',
+// 		iconsAnimationSpeed: 600,
+// 		iconsAnimationPause: 2000,
+// 		items: arcItems,
 		
-		promptPosition: 'side',
-		popupAnimation: 'fadeindown',
-		style: '',
-		menuStyle: 'style-1',
-		backdrop: true
+// 		promptPosition: 'side',
+// 		popupAnimation: 'fadeindown',
+// 		style: '',
+// 		menuStyle: 'style-1',
+// 		backdrop: true
 		
-	}; ;
+// 	}; ;
   
 
-	$arcuWidget = document.createElement('div');
-	var body = document.getElementsByTagName('body')[0];
-	$arcuWidget.id = 'arcontactus';
-	if (document.getElementById('arcontactus')) {
-		document.getElementById('arcontactus').parentElement.removeChild(document.getElementById('arcontactus'));
-	}
-	body.appendChild($arcuWidget);
-	arCuClosedCookie = arCuGetCookie('arcu-closed');
-	$arcuWidget.addEventListener('arcontactus.init', function() {
-		$arcuWidget.classList.add('arcuAnimated');
-		$arcuWidget.classList.add('flipInY');
-		setTimeout(function() {
-			$arcuWidget.classList.remove('flipInY');
-		}, 1000);
+// 	$arcuWidget = document.createElement('div');
+// 	var body = document.getElementsByTagName('body')[0];
+// 	$arcuWidget.id = 'arcontactus';
+// 	if (document.getElementById('arcontactus')) {
+// 		document.getElementById('arcontactus').parentElement.removeChild(document.getElementById('arcontactus'));
+// 	}
+// 	body.appendChild($arcuWidget);
+// 	arCuClosedCookie = arCuGetCookie('arcu-closed');
+// 	$arcuWidget.addEventListener('arcontactus.init', function() {
+// 		$arcuWidget.classList.add('arcuAnimated');
+// 		$arcuWidget.classList.add('flipInY');
+// 		setTimeout(function() {
+// 			$arcuWidget.classList.remove('flipInY');
+// 		}, 1000);
 		
 		
-		$arcuWidget.addEventListener('arcontactus.hideFrom', function() {
-			clearTimeout(closePopupTimeout);
-		});
-		if (arCuClosedCookie) {
-			return false;
-		}
-		arCuShowMessages();
-	});
-	$arcuWidget.addEventListener('arcontactus.closeMenu', function() {
-		arCuCreateCookie('arcumenu-closed', 1, 1);
-	});
-	$arcuWidget.addEventListener('arcontactus.openMenu', function() {
-		clearTimeout(_arCuTimeOut);
-		if (!arCuPromptClosed) {
-			arCuPromptClosed = true;
-			contactUs.hidePrompt();
-		}
-	});
-	$arcuWidget.addEventListener('arcontactus.showFrom', function() {
-		clearTimeout(_arCuTimeOut);
-		if (!arCuPromptClosed) {
-			arCuPromptClosed = true;
-			contactUs.hidePrompt();
-		}
-	});
-	$arcuWidget.addEventListener('arcontactus.showForm', function() {
-		clearTimeout(_arCuTimeOut);
-		if (!arCuPromptClosed) {
-			arCuPromptClosed = true;
-			contactUs.hidePrompt();
-		}
-	});
-	$arcuWidget.addEventListener('arcontactus.hidePrompt', function() {
-		clearTimeout(_arCuTimeOut);
-		if (arCuClosedCookie != "1") {
-			arCuClosedCookie = "1";
-			arCuPromptClosed = true;
-			arCuCreateCookie('arcu-closed', 1, 0);
-		}
-	});
-	if(mybtnOptions.phone_show == true)
-	{
-	var arcItem = {};
-	arcItem.id = 'msg-item-7';
-	arcItem.noContainer = 1;
-	arcItem.online = true;
-	arcItem.class = 'msg-item-phone';
-	arcItem.title = mybtnOptions.phone_title;
-	arcItem.subTitle = mybtnOptions.phone_subTitle;
-	arcItem.icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"/></svg>';
-	arcItem.includeIconToSlider = true;
-	arcItem.href = mybtnOptions.phone_href;
-	arcItem.color = 'var(--cta-color)';
-	arcItems.push(arcItem);
-	}
-	if(mybtnOptions.facebook_show == true)
-	{
-	var arcItem = {};
-	arcItem.id = 'msg-item-1';
-	arcItem.noContainer = 1;
-	arcItem.online = true;
-	arcItem.class = 'msg-item-facebook-messenger';
-	arcItem.title = mybtnOptions.facebook_title;
-	arcItem.subTitle = mybtnOptions.facebook_subTitle;
-	arcItem.icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224 32C15.9 32-77.5 278 84.6 400.6V480l75.7-42c142.2 39.8 285.4-59.9 285.4-198.7C445.8 124.8 346.5 32 224 32zm23.4 278.1L190 250.5 79.6 311.6l121.1-128.5 57.4 59.6 110.4-61.1-121.1 128.5z"></path></svg>';
-	arcItem.includeIconToSlider = true;
-	arcItem.href = mybtnOptions.facebook_href;
-	arcItem.color = 'var(--cta-color)';
-	arcItems.push(arcItem);
-	}
-	if(mybtnOptions.zalo_show == true)
-	{
-	var arcItem = {};
-	arcItem.id = 'msg-item-2';
-	arcItem.noContainer = 1;
-	arcItem.online = true;
-	arcItem.class = 'msg-item-zalo';
-	arcItem.title = mybtnOptions.zalo_title;
-	arcItem.subTitle = mybtnOptions.zalo_subTitle;
-	arcItem.icon = '<svg viewBox="0 0 309.31 309.31" xmlns="http://www.w3.org/2000/svg"><path fill="var(--cta-color)" d="M57.616 1.567c10.59-1.67 21.36-1.68 32.06-1.44l-.92.85c-14 9.17-25.61 21.76-34 36.21-16.82 28.93-22.95 63.14-21.56 96.3 1.38 27 7.86 54.15 21.6 77.62 2.3 4.2 6.13 7.91 6.19 13.01.43 10.94-4.98 21.25-12.3 29.07.48.5.95 1 1.43 1.5 6.85 7.48 14.16 14.51 21.12 21.89 9.89 11.18 21.16 21.08 30.85 32.46-16.12.24-32.43.99-48.36-2.02-20.05-3.89-37.85-17.79-46.35-36.37-5.15-10.74-6.69-22.75-7.09-34.52-.01-54.34-.01-108.67 0-163 .22-18.16 5.03-37.16 17.81-50.63 10.12-11.41 24.45-18.83 39.52-20.93zM204.44 101.35h12.88c-.07 25.13-.07 50.27 0 75.4-4.2-.59-11.19 2.1-12.77-3.49-.26-23.96-.02-47.94-.11-71.91z"/><path fill="var(--cta-color)" d="M73.196 102.24c19.96-.02 39.9-.15 59.85-.01-.14 3.91-.36 8.17-2.98 11.33-13.64 16.98-26.99 34.18-40.62 51.16 14.49.09 28.98.03 43.47.03-.27 3.39.92 7.34-1.28 10.28-1.38 1.9-3.88 1.73-5.95 1.75-18.13-.1-36.26.09-54.38-.1.05-3.83.09-8.07 2.77-11.12 13.48-16.91 27.12-33.7 40.54-50.65-13.79.02-27.59-.09-41.38.06-.09-4.24-.06-8.49-.04-12.73zm176.054 16.64c14.36-3.21 29.94 6.22 33.87 20.36 4.93 14.71-4.07 32.2-18.94 36.68-12.63 4.45-27.75-1.36-34.3-13-5.14-8.6-5.45-19.86-.78-28.71 3.96-7.81 11.61-13.52 20.15-15.33zm-.24 12.74c-8.76 3.09-13.48 13.75-10.06 22.36 2.83 8.14 12.36 13.12 20.64 10.62 9.45-2.26 15.16-13.33 11.81-22.4-2.8-8.98-13.65-14.16-22.39-10.58zm-106.14-2.27c6.91-8.56 19.01-12.78 29.67-9.73 3.52.89 6.71 2.65 9.79 4.52-.03-.94-.1-2.81-.13-3.75 4.03-.02 8.05-.01 12.08-.03-.02 18.8-.04 37.6.01 56.41-2.96-.08-5.97.27-8.88-.33-2.04-.83-2.67-3.06-3.48-4.88-11.12 8.64-28.59 6.68-37.83-3.84-9.85-10.19-10.36-27.55-1.23-38.37zm16.28 2.52c-9.26 3.26-13.75 15.19-9.06 23.79 4 8.38 15.26 11.9 23.31 7.28 7.47-3.92 10.92-13.65 7.71-21.43-3.11-8.46-13.6-13.2-21.96-9.64z"/><path fill="#fff" d="M88.756.977c2.24-.64 4.58-.84 6.9-.91 39.99.15 79.98-.02 119.97.05 10.69.13 21.44-.59 32.05 1.04 14.69 1.12 28.83 7.34 39.76 17.17 13.72 13.11 21.04 31.99 21.27 50.82.01 53.01-.02 106.06.03 159.05-.14.31-.41.95-.55 1.27-14.25 15.94-33.41 26.73-53.44 33.71-26.99 9.2-55.9 12.16-84.27 10-28.37-2.44-56.96-9.85-81.02-25.53-12.3 5.47-25.87 8.15-39.34 7.04-.48-.5-.95-1-1.43-1.5 7.32-7.82 12.73-18.13 12.3-29.07-.06-5.1-3.89-8.81-6.19-13.01-13.74-23.47-20.22-50.62-21.6-77.62-1.39-33.16 4.74-67.37 21.56-96.3 8.39-14.45 20-27.04 34-36.21zm115.68 100.37c.09 23.97-.15 47.95.11 71.91 1.58 5.59 8.57 2.9 12.77 3.49-.07-25.13-.07-50.27 0-75.4h-12.88zm-131.24.89c-.02 4.24-.05 8.49.04 12.73 13.79-.15 27.59-.04 41.38-.06-13.42 16.95-27.06 33.74-40.54 50.65-2.68 3.05-2.72 7.29-2.77 11.12 18.12.19 36.25 0 54.38.1 2.07-.02 4.57.15 5.95-1.75 2.2-2.94 1.01-6.89 1.28-10.28-14.49 0-28.98.06-43.47-.03 13.63-16.98 26.98-34.18 40.62-51.16 2.62-3.16 2.84-7.42 2.98-11.33-19.95-.14-39.89-.01-59.85.01zm176.05 16.64c-8.54 1.81-16.19 7.52-20.15 15.33-4.67 8.85-4.36 20.11.78 28.71 6.55 11.64 21.67 17.45 34.3 13 14.87-4.48 23.87-21.97 18.94-36.68-3.93-14.14-19.51-23.57-33.87-20.36zm-106.38 10.47c-9.13 10.82-8.62 28.18 1.23 38.37 9.24 10.52 26.71 12.48 37.83 3.84.81 1.82 1.44 4.05 3.48 4.88 2.91.6 5.92.25 8.88.33-.05-18.81-.03-37.61-.01-56.41-4.03.02-8.05.01-12.08.03.03.94.1 2.81.13 3.75-3.08-1.87-6.27-3.63-9.79-4.52-10.66-3.05-22.76 1.17-29.67 9.73z"/><path fill="#fff" d="M159.15 131.87c8.36-3.56 18.85 1.18 21.96 9.64 3.21 7.78-.24 17.51-7.71 21.43-8.05 4.62-19.31 1.1-23.31-7.28-4.69-8.6-.2-20.53 9.06-23.79zm89.86-.25c8.74-3.58 19.59 1.6 22.39 10.58 3.35 9.07-2.36 20.14-11.81 22.4-8.28 2.5-17.81-2.48-20.64-10.62-3.42-8.61 1.3-19.27 10.06-22.36z"/><path fill="var(--cta-color)" d="M308.19 229.47l.79-.86c.41 15.63-1.28 31.94-8.95 45.85-8.92 16.32-25.1 28.44-43.3 32.32-10.21 2.11-20.68 2.58-31.08 2.45-31.99.01-63.98 0-95.97.01-9.2-.15-18.42.28-27.59-.2-9.69-11.38-20.96-21.28-30.85-32.46-6.96-7.38-14.27-14.41-21.12-21.89 13.47 1.11 27.04-1.57 39.34-7.04 24.06 15.68 52.65 23.09 81.02 25.53 28.37 2.16 57.28-.8 84.27-10 20.03-6.98 39.19-17.77 53.44-33.71z"/></svg>';
-	arcItem.includeIconToSlider = true;
-	arcItem.href = mybtnOptions.zalo_href ;
-	arcItem.color = 'var(--cta-color)';
-	arcItems.push(arcItem);
-	}
-	if(mybtnOptions.email_show == true)
-	{
-	var arcItem = {};
-	arcItem.id = 'msg-item-6';
-	arcItem.noContainer = 1;
-	arcItem.online = true;
-	arcItem.class = 'msg-item-envelope';
-	arcItem.title = mybtnOptions.email_title;
-	arcItem.subTitle = mybtnOptions.email_subTitle;
-	arcItem.icon = '<svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 64H48C21.5 64 0 85.5 0 112v288c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM48 96h416c8.8 0 16 7.2 16 16v41.4c-21.9 18.5-53.2 44-150.6 121.3-16.9 13.4-50.2 45.7-73.4 45.3-23.2.4-56.6-31.9-73.4-45.3C85.2 197.4 53.9 171.9 32 153.4V112c0-8.8 7.2-16 16-16zm416 320H48c-8.8 0-16-7.2-16-16V195c22.8 18.7 58.8 47.6 130.7 104.7 20.5 16.4 56.7 52.5 93.3 52.3 36.4.3 72.3-35.5 93.3-52.3 71.9-57.1 107.9-86 130.7-104.7v205c0 8.8-7.2 16-16 16z"></path></svg>';
-	arcItem.includeIconToSlider = true;
-	arcItem.href = mybtnOptions.email_href;
-	arcItem.color = 'var(--cta-color)';
-	arcItems.push(arcItem);
-	}
+// 		$arcuWidget.addEventListener('arcontactus.hideFrom', function() {
+// 			clearTimeout(closePopupTimeout);
+// 		});
+// 		if (arCuClosedCookie) {
+// 			return false;
+// 		}
+// 		arCuShowMessages();
+// 	});
+// 	$arcuWidget.addEventListener('arcontactus.closeMenu', function() {
+// 		arCuCreateCookie('arcumenu-closed', 1, 1);
+// 	});
+// 	$arcuWidget.addEventListener('arcontactus.openMenu', function() {
+// 		clearTimeout(_arCuTimeOut);
+// 		if (!arCuPromptClosed) {
+// 			arCuPromptClosed = true;
+// 			contactUs.hidePrompt();
+// 		}
+// 	});
+// 	$arcuWidget.addEventListener('arcontactus.showFrom', function() {
+// 		clearTimeout(_arCuTimeOut);
+// 		if (!arCuPromptClosed) {
+// 			arCuPromptClosed = true;
+// 			contactUs.hidePrompt();
+// 		}
+// 	});
+// 	$arcuWidget.addEventListener('arcontactus.showForm', function() {
+// 		clearTimeout(_arCuTimeOut);
+// 		if (!arCuPromptClosed) {
+// 			arCuPromptClosed = true;
+// 			contactUs.hidePrompt();
+// 		}
+// 	});
+// 	$arcuWidget.addEventListener('arcontactus.hidePrompt', function() {
+// 		clearTimeout(_arCuTimeOut);
+// 		if (arCuClosedCookie != "1") {
+// 			arCuClosedCookie = "1";
+// 			arCuPromptClosed = true;
+// 			arCuCreateCookie('arcu-closed', 1, 0);
+// 		}
+// 	});
+// 	if(mybtnOptions.phone_show == true)
+// 	{
+// 	var arcItem = {};
+// 	arcItem.id = 'msg-item-7';
+// 	arcItem.noContainer = 1;
+// 	arcItem.online = true;
+// 	arcItem.class = 'msg-item-phone';
+// 	arcItem.title = mybtnOptions.phone_title;
+// 	arcItem.subTitle = mybtnOptions.phone_subTitle;
+// 	arcItem.icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"/></svg>';
+// 	arcItem.includeIconToSlider = true;
+// 	arcItem.href = mybtnOptions.phone_href;
+// 	arcItem.color = 'var(--cta-color)';
+// 	arcItems.push(arcItem);
+// 	}
+// 	if(mybtnOptions.facebook_show == true)
+// 	{
+// 	var arcItem = {};
+// 	arcItem.id = 'msg-item-1';
+// 	arcItem.noContainer = 1;
+// 	arcItem.online = true;
+// 	arcItem.class = 'msg-item-facebook-messenger';
+// 	arcItem.title = mybtnOptions.facebook_title;
+// 	arcItem.subTitle = mybtnOptions.facebook_subTitle;
+// 	arcItem.icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224 32C15.9 32-77.5 278 84.6 400.6V480l75.7-42c142.2 39.8 285.4-59.9 285.4-198.7C445.8 124.8 346.5 32 224 32zm23.4 278.1L190 250.5 79.6 311.6l121.1-128.5 57.4 59.6 110.4-61.1-121.1 128.5z"></path></svg>';
+// 	arcItem.includeIconToSlider = true;
+// 	arcItem.href = mybtnOptions.facebook_href;
+// 	arcItem.color = 'var(--cta-color)';
+// 	arcItems.push(arcItem);
+// 	}
+// 	if(mybtnOptions.zalo_show == true)
+// 	{
+// 	var arcItem = {};
+// 	arcItem.id = 'msg-item-2';
+// 	arcItem.noContainer = 1;
+// 	arcItem.online = true;
+// 	arcItem.class = 'msg-item-zalo';
+// 	arcItem.title = mybtnOptions.zalo_title;
+// 	arcItem.subTitle = mybtnOptions.zalo_subTitle;
+// 	arcItem.icon = '<svg viewBox="0 0 309.31 309.31" xmlns="http://www.w3.org/2000/svg"><path fill="var(--cta-color)" d="M57.616 1.567c10.59-1.67 21.36-1.68 32.06-1.44l-.92.85c-14 9.17-25.61 21.76-34 36.21-16.82 28.93-22.95 63.14-21.56 96.3 1.38 27 7.86 54.15 21.6 77.62 2.3 4.2 6.13 7.91 6.19 13.01.43 10.94-4.98 21.25-12.3 29.07.48.5.95 1 1.43 1.5 6.85 7.48 14.16 14.51 21.12 21.89 9.89 11.18 21.16 21.08 30.85 32.46-16.12.24-32.43.99-48.36-2.02-20.05-3.89-37.85-17.79-46.35-36.37-5.15-10.74-6.69-22.75-7.09-34.52-.01-54.34-.01-108.67 0-163 .22-18.16 5.03-37.16 17.81-50.63 10.12-11.41 24.45-18.83 39.52-20.93zM204.44 101.35h12.88c-.07 25.13-.07 50.27 0 75.4-4.2-.59-11.19 2.1-12.77-3.49-.26-23.96-.02-47.94-.11-71.91z"/><path fill="var(--cta-color)" d="M73.196 102.24c19.96-.02 39.9-.15 59.85-.01-.14 3.91-.36 8.17-2.98 11.33-13.64 16.98-26.99 34.18-40.62 51.16 14.49.09 28.98.03 43.47.03-.27 3.39.92 7.34-1.28 10.28-1.38 1.9-3.88 1.73-5.95 1.75-18.13-.1-36.26.09-54.38-.1.05-3.83.09-8.07 2.77-11.12 13.48-16.91 27.12-33.7 40.54-50.65-13.79.02-27.59-.09-41.38.06-.09-4.24-.06-8.49-.04-12.73zm176.054 16.64c14.36-3.21 29.94 6.22 33.87 20.36 4.93 14.71-4.07 32.2-18.94 36.68-12.63 4.45-27.75-1.36-34.3-13-5.14-8.6-5.45-19.86-.78-28.71 3.96-7.81 11.61-13.52 20.15-15.33zm-.24 12.74c-8.76 3.09-13.48 13.75-10.06 22.36 2.83 8.14 12.36 13.12 20.64 10.62 9.45-2.26 15.16-13.33 11.81-22.4-2.8-8.98-13.65-14.16-22.39-10.58zm-106.14-2.27c6.91-8.56 19.01-12.78 29.67-9.73 3.52.89 6.71 2.65 9.79 4.52-.03-.94-.1-2.81-.13-3.75 4.03-.02 8.05-.01 12.08-.03-.02 18.8-.04 37.6.01 56.41-2.96-.08-5.97.27-8.88-.33-2.04-.83-2.67-3.06-3.48-4.88-11.12 8.64-28.59 6.68-37.83-3.84-9.85-10.19-10.36-27.55-1.23-38.37zm16.28 2.52c-9.26 3.26-13.75 15.19-9.06 23.79 4 8.38 15.26 11.9 23.31 7.28 7.47-3.92 10.92-13.65 7.71-21.43-3.11-8.46-13.6-13.2-21.96-9.64z"/><path fill="#fff" d="M88.756.977c2.24-.64 4.58-.84 6.9-.91 39.99.15 79.98-.02 119.97.05 10.69.13 21.44-.59 32.05 1.04 14.69 1.12 28.83 7.34 39.76 17.17 13.72 13.11 21.04 31.99 21.27 50.82.01 53.01-.02 106.06.03 159.05-.14.31-.41.95-.55 1.27-14.25 15.94-33.41 26.73-53.44 33.71-26.99 9.2-55.9 12.16-84.27 10-28.37-2.44-56.96-9.85-81.02-25.53-12.3 5.47-25.87 8.15-39.34 7.04-.48-.5-.95-1-1.43-1.5 7.32-7.82 12.73-18.13 12.3-29.07-.06-5.1-3.89-8.81-6.19-13.01-13.74-23.47-20.22-50.62-21.6-77.62-1.39-33.16 4.74-67.37 21.56-96.3 8.39-14.45 20-27.04 34-36.21zm115.68 100.37c.09 23.97-.15 47.95.11 71.91 1.58 5.59 8.57 2.9 12.77 3.49-.07-25.13-.07-50.27 0-75.4h-12.88zm-131.24.89c-.02 4.24-.05 8.49.04 12.73 13.79-.15 27.59-.04 41.38-.06-13.42 16.95-27.06 33.74-40.54 50.65-2.68 3.05-2.72 7.29-2.77 11.12 18.12.19 36.25 0 54.38.1 2.07-.02 4.57.15 5.95-1.75 2.2-2.94 1.01-6.89 1.28-10.28-14.49 0-28.98.06-43.47-.03 13.63-16.98 26.98-34.18 40.62-51.16 2.62-3.16 2.84-7.42 2.98-11.33-19.95-.14-39.89-.01-59.85.01zm176.05 16.64c-8.54 1.81-16.19 7.52-20.15 15.33-4.67 8.85-4.36 20.11.78 28.71 6.55 11.64 21.67 17.45 34.3 13 14.87-4.48 23.87-21.97 18.94-36.68-3.93-14.14-19.51-23.57-33.87-20.36zm-106.38 10.47c-9.13 10.82-8.62 28.18 1.23 38.37 9.24 10.52 26.71 12.48 37.83 3.84.81 1.82 1.44 4.05 3.48 4.88 2.91.6 5.92.25 8.88.33-.05-18.81-.03-37.61-.01-56.41-4.03.02-8.05.01-12.08.03.03.94.1 2.81.13 3.75-3.08-1.87-6.27-3.63-9.79-4.52-10.66-3.05-22.76 1.17-29.67 9.73z"/><path fill="#fff" d="M159.15 131.87c8.36-3.56 18.85 1.18 21.96 9.64 3.21 7.78-.24 17.51-7.71 21.43-8.05 4.62-19.31 1.1-23.31-7.28-4.69-8.6-.2-20.53 9.06-23.79zm89.86-.25c8.74-3.58 19.59 1.6 22.39 10.58 3.35 9.07-2.36 20.14-11.81 22.4-8.28 2.5-17.81-2.48-20.64-10.62-3.42-8.61 1.3-19.27 10.06-22.36z"/><path fill="var(--cta-color)" d="M308.19 229.47l.79-.86c.41 15.63-1.28 31.94-8.95 45.85-8.92 16.32-25.1 28.44-43.3 32.32-10.21 2.11-20.68 2.58-31.08 2.45-31.99.01-63.98 0-95.97.01-9.2-.15-18.42.28-27.59-.2-9.69-11.38-20.96-21.28-30.85-32.46-6.96-7.38-14.27-14.41-21.12-21.89 13.47 1.11 27.04-1.57 39.34-7.04 24.06 15.68 52.65 23.09 81.02 25.53 28.37 2.16 57.28-.8 84.27-10 20.03-6.98 39.19-17.77 53.44-33.71z"/></svg>';
+// 	arcItem.includeIconToSlider = true;
+// 	arcItem.href = mybtnOptions.zalo_href ;
+// 	arcItem.color = 'var(--cta-color)';
+// 	arcItems.push(arcItem);
+// 	}
+// 	if(mybtnOptions.email_show == true)
+// 	{
+// 	var arcItem = {};
+// 	arcItem.id = 'msg-item-6';
+// 	arcItem.noContainer = 1;
+// 	arcItem.online = true;
+// 	arcItem.class = 'msg-item-envelope';
+// 	arcItem.title = mybtnOptions.email_title;
+// 	arcItem.subTitle = mybtnOptions.email_subTitle;
+// 	arcItem.icon = '<svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 64H48C21.5 64 0 85.5 0 112v288c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM48 96h416c8.8 0 16 7.2 16 16v41.4c-21.9 18.5-53.2 44-150.6 121.3-16.9 13.4-50.2 45.7-73.4 45.3-23.2.4-56.6-31.9-73.4-45.3C85.2 197.4 53.9 171.9 32 153.4V112c0-8.8 7.2-16 16-16zm416 320H48c-8.8 0-16-7.2-16-16V195c22.8 18.7 58.8 47.6 130.7 104.7 20.5 16.4 56.7 52.5 93.3 52.3 36.4.3 72.3-35.5 93.3-52.3 71.9-57.1 107.9-86 130.7-104.7v205c0 8.8-7.2 16-16 16z"></path></svg>';
+// 	arcItem.includeIconToSlider = true;
+// 	arcItem.href = mybtnOptions.email_href;
+// 	arcItem.color = 'var(--cta-color)';
+// 	arcItems.push(arcItem);
+// 	}
 	
-	setTimeout(function() {contactUs.init(arcuOptions)}, 2000);
+// 	setTimeout(function() {contactUs.init(arcuOptions)}, 2000);
 	
 	
-});  
+// });  

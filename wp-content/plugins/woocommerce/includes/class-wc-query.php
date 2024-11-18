@@ -95,6 +95,8 @@ class WC_Query {
 			'orders'                     => get_option( 'woocommerce_myaccount_orders_endpoint', 'orders' ),
 			'view-order'                 => get_option( 'woocommerce_myaccount_view_order_endpoint', 'view-order' ),
 			'downloads'                  => get_option( 'woocommerce_myaccount_downloads_endpoint', 'downloads' ),
+			'point'                 	 => get_option( 'woocommerce_myaccount_point_endpoint', 'point' ),
+			'affilate'                 	 => get_option( 'woocommerce_myaccount_affilate_endpoint', 'affilate' ),
 			'edit-account'               => get_option( 'woocommerce_myaccount_edit_account_endpoint', 'edit-account' ),
 			'edit-address'               => get_option( 'woocommerce_myaccount_edit_address_endpoint', 'edit-address' ),
 			'payment-methods'            => get_option( 'woocommerce_myaccount_payment_methods_endpoint', 'payment-methods' ),
@@ -142,6 +144,12 @@ class WC_Query {
 			case 'downloads':
 				$title = __( 'Downloads', 'woocommerce' );
 				break;
+				case 'point':
+					$title = "Point";
+					break;
+					case 'affilate':
+						$title = "Affilate";
+						break;
 			case 'edit-account':
 				$title = __( 'Account details', 'woocommerce' );
 				break;
