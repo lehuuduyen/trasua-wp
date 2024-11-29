@@ -75,7 +75,7 @@ function custom_page_affilate_content()
     $prefix = $wpdb->prefix;
 
     $history = $wpdb->get_results("SELECT * FROM " . $prefix . "woo_history_user_commission WHERE (user_parent = '" . get_current_user_id() . "' AND status = '1' OR status = '2') ORDER BY create_at;");
-    
+
 
     wc_get_template(
         'myaccount/affilate.php',
@@ -95,6 +95,61 @@ function custom_page_menu_item_affilate($items)
     $items['affilate'] = 'Affilate';
     return $items;
 }
+
+add_filter('woocommerce_register_shop_order_post_statuses', 'bbloomer_register_custom_order_status');
+
+function bbloomer_register_custom_order_status($order_statuses)
+{
+
+    // Status must start with “wc-”
+    $order_statuses['wc-process-shipper'] = array(
+        'label' => 'Chờ giao hàng',
+        'public' => false,
+        'exclude_from_search' => false,
+        'show_in_admin_all_list' => true,
+        'show_in_admin_status_list' => true,
+        'label_count'               => _n_noop('Chờ giao hàng (%s)', 'Chờ giao hàng (%s)')
+    );
+    return $order_statuses;
+}
+add_filter('bulk_actions-edit-shop_order', 'bbloomer_get_custom_order_status_bulk');
+
+function bbloomer_get_custom_order_status_bulk($bulk_actions)
+{
+    // Note: “mark_” must be there instead of “wc”
+    $bulk_actions['mark_process-shipper'] = 'Change status to custom status';
+    return $bulk_actions;
+}
+add_action('woocommerce_thankyou', 'bbloomer_thankyou_change_order_status');
+
+function bbloomer_thankyou_change_order_status($order_id)
+{
+    if (! $order_id) return;
+    $order = wc_get_order($order_id);
+
+    // Status without the “wc-” prefix
+    $order->update_status('process-shipper');
+    $order->add_order_note('Đơn hàng đã được chuyển sang trạng thái Chờ giao hàng.');
+
+}
+// Thêm trạng thái vào WooCommerce
+function add_custom_status_to_woocommerce($order_statuses)
+{
+    $new_statuses = array();
+
+    foreach ($order_statuses as $key => $status) {
+        $new_statuses[$key] = $status;
+        if ('wc-processing' === $key) {
+            $new_statuses['wc-waiting-for-shipment'] = 'Chờ giao hàng';
+        }
+    }
+
+    return $new_statuses;
+}
+add_filter('wc_order_statuses', 'add_custom_status_to_woocommerce');
+
+
+
 //screen affilate
 
 // C:\xampp8.1\htdocs\trasua-wp\wp-content\plugins\woocommerce\includes\wc-account-functions.php
