@@ -153,3 +153,93 @@ add_filter('wc_order_statuses', 'add_custom_status_to_woocommerce');
 //screen affilate
 
 // C:\xampp8.1\htdocs\trasua-wp\wp-content\plugins\woocommerce\includes\wc-account-functions.php
+
+// Thêm menu con trong WooCommerce Settings
+add_action('admin_menu', 'register_store_locations_menu');
+function register_store_locations_menu() {
+    if (!current_user_can('manage_options')) {
+        return;
+    }
+
+    add_submenu_page(
+        'woocommerce',
+        __('Địa Chỉ Cửa Hàng', 'woocommerce'),
+        __('Địa Chỉ Cửa Hàng', 'woocommerce'),
+        'manage_woocommerce',
+        'store-locations',
+        'render_store_locations_page'
+    );
+}
+
+// Hiển thị trang cài đặt địa chỉ cửa hàng
+function render_store_locations_page() {
+    if (!current_user_can('manage_woocommerce')) {
+        wp_die(__('Bạn không có quyền truy cập vào trang này.', 'woocommerce'));
+    }
+
+    // Lấy danh sách địa chỉ
+    $store_addresses = get_option('custom_store_addresses', []);
+
+    // Lưu dữ liệu khi form được submit
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && check_admin_referer('store_locations_nonce')) {
+        if (isset($_POST['custom_store_addresses'])) {
+            $store_addresses = array_map('sanitize_text_field', $_POST['custom_store_addresses']);
+            update_option('custom_store_addresses', $store_addresses);
+            echo '<div class="updated notice"><p>Địa chỉ cửa hàng đã được lưu thành công!</p></div>';
+        }
+    }
+    ?>
+
+    <div class="wrap">
+        <h1><?php _e('Danh Sách Địa Chỉ Cửa Hàng', 'woocommerce'); ?></h1>
+        <form method="post" action="">
+            <?php wp_nonce_field('store_locations_nonce'); ?>
+            <table id="store-locations-table" class="form-table">
+                <tbody>
+                    <?php
+                    if (!empty($store_addresses)) {
+                        foreach ($store_addresses as $address) {
+                            ?>
+                            <tr>
+                                <td>
+                                    <input type="text" name="custom_store_addresses[]" value="<?php echo esc_attr($address); ?>" placeholder="Nhập địa chỉ cửa hàng" />
+                                </td>
+                                <td>
+                                    <button type="button" class="remove-address button">Xóa</button>
+                                </td>
+                            </tr>
+                            <?php
+                        }
+                    }
+                    ?>
+                </tbody>
+            </table>
+            <p>
+                <button type="button" id="add-store-address" class="button">+ Thêm địa chỉ</button>
+            </p>
+            <p>
+                <button type="submit" class="button-primary"><?php _e('Lưu Địa Chỉ', 'woocommerce'); ?></button>
+            </p>
+        </form>
+    </div>
+
+    <script>
+    jQuery(document).ready(function($) {
+        // Thêm dòng mới
+        $('#add-store-address').on('click', function() {
+            $('#store-locations-table tbody').append(
+                '<tr>' +
+                    '<td><input type="text" name="custom_store_addresses[]" placeholder="Nhập địa chỉ cửa hàng" /></td>' +
+                    '<td><button type="button" class="remove-address button">Xóa</button></td>' +
+                '</tr>'
+            );
+        });
+
+        // Xóa dòng hiện tại
+        $('#store-locations-table').on('click', '.remove-address', function() {
+            $(this).closest('tr').remove();
+        });
+    });
+    </script>
+    <?php
+}
