@@ -243,3 +243,10 @@ function render_store_locations_page() {
     </script>
     <?php
 }
+
+function add_cors_http_header() {
+    header("Access-Control-Allow-Origin: http://web.local");
+    header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+    header("Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With");
+}
+add_action('init', 'add_cors_http_header');
