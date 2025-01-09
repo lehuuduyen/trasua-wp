@@ -111,6 +111,21 @@ function plugin_setup_db()
       //status =1 (them) =2  (tru)
       dbDelta($sql);
     }
+    $ptbd_table_name = $wpdb->prefix . 'otp_code';
+    if ($wpdb->get_var("SHOW TABLES LIKE '" . $ptbd_table_name . "'") != $ptbd_table_name) {
+      dbDelta("SET GLOBAL TIME_ZONE = '+07:00';");
+      $sql  = 'CREATE TABLE ' . $ptbd_table_name . '(
+          id BIGINT AUTO_INCREMENT,
+          otp INT NOT NULL,
+          sdt VARCHAR(255)  NOT NULL,
+          status INT DEFAULT 1, 
+          time BIGINT NOT NULL, 
+          create_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  ,
+
+                  PRIMARY KEY(id))';
+      //status =1 (them) =2  (tru)
+      dbDelta($sql);
+    }
   } catch (\Exception $ex) {
   }
 }
