@@ -119,7 +119,7 @@ function plugin_setup_db()
           otp INT NOT NULL,
           sdt VARCHAR(255)  NOT NULL,
           status INT DEFAULT 1, 
-          time BIGINT NOT NULL, 
+          time VARCHAR(255)  NOT NULL, 
           create_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  ,
 
                   PRIMARY KEY(id))';
