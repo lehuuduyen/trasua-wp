@@ -29,10 +29,10 @@
 define( 'DB_NAME', 'trasua' );
 
 /** Database username */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', 'user' );
 
 /** Database password */
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', 'password' );
 
 /** Database hostname */
 define( 'DB_HOST', 'localhost' );
