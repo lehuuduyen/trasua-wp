@@ -20,7 +20,8 @@
       <th>Xếp hạng</th>
       <th>Chi tiêu tối thiểu</th>
       <th>Khuyến mãi</th>
-      <th>Chiết khấu</th>
+      <th>Màu</th>
+      <!-- <th>Chiết khấu</th> -->
       <th>Hành động</th>
     </tr>
   </thead>
@@ -36,7 +37,8 @@
         <td><?php echo $value['name'] ?></td>
         <td><?php echo $value['minimum_spending'] ?></td>
         <td><?php echo $value['price_sale_off'] ?></td>
-        <td><?php echo $value['discount'] ?></td>
+        <td><?php echo $value['color'] ?></td>
+        <!-- <td><?php echo $value['discount'] ?></td> -->
         <td class="table-actions">
           <span onclick="openEditModal(<?php echo $value['id']; ?>)" class="button dashicons dashicons-edit-page"></span>
           <span onclick="showModal('modal-delete-ranking-<?php echo $value['id']; ?>')" class="button delete">✕</span>
@@ -163,7 +165,8 @@
                     <th>Hình ảnh</th>
                     <th>Xếp hạng</th>
                     <th>Chi tiêu tối thiểu</th>
-                    <th>Chiết khấu</th>
+                    <th>Màu</th>
+                    <!-- <th>Chiết khấu</th> -->
                     <th>Hành động</th>
                   </tr>
                 </thead>
@@ -194,10 +197,15 @@
                       <p class="form-error-text d-none">Đây là trường bắt buộc</p>
                     </td>
                     <td>
+                      <p class="required">Màu sắc</p>
+                      <input class="require-field" type="color" name="color[]" placeholder="Vui lòng nhập màu rank" value="<?php echo $value['color']; ?>" />
+                      <p class="form-error-text d-none">Đây là trường bắt buộc</p>
+                    </td>
+                    <!-- <td>
                       <p class="required">Chiết khấu</p>
                       <input class="require-field" type="number" name="discount[]" placeholder="Vui lòng nhập Chi tiêu tối thiểu" value="<?php echo $value['discount']; ?>" />
                       <p class="form-error-text d-none">Đây là trường bắt buộc</p>
-                    </td>
+                    </td> -->
                     <td>
                       <span disabled class="button delete">✕</span>
                     </td>
@@ -285,7 +293,8 @@
                     <tr>
                       <th>Xếp hạng</th>
                       <th>Chi tiêu tối thiểu</th>
-                      <th>Chiết khấu</th>
+                      <th>Màu</th>
+                      <!-- <th>Chiết khấu</th> -->
                       <th>Khuyến mãi</th>
                       <th>Số tiền khuyến mãi tối đa cho một đơn hàng</th>
                     </tr>
@@ -300,8 +309,11 @@
                         <span class="show-minimum-spending-final"><?php echo $value['minimum_spending']; ?></span>
                       </td>
                       <td>
-                        <span class="show-discount-final"><?php echo $value['discount']; ?></span>
+                        <span class="show-discount-color"><?php echo $value['color']; ?></span>
                       </td>
+                      <!-- <td>
+                        <span class="show-discount-final"><?php echo $value['discount']; ?></span>
+                      </td> -->
                       <td>
                         <span class="show-price-sale-off-final"><?php echo $value['price_sale_off']; ?></span>
                       </td>
@@ -411,7 +423,8 @@
                   <th>Hình ảnh</th>
                   <th>Xếp hạng</th>
                   <th>Chi tiêu tối thiểu</th>
-                  <th>Chiết khấu</th>
+                  <th>Màu</th>
+                  <!-- <th>Chiết khấu</th> -->
                   <th>Hành động</th>
                 </tr>
               </thead>
@@ -443,10 +456,15 @@
                       <p class="form-error-text d-none">Đây là trường bắt buộc</p>
                     </td>
                     <td>
+                      <p class="required">Màu rank</p>
+                      <input class="require-field" type="number" name="color[]" placeholder="Vui lòng nhập màu" value="<?php echo $value['color']; ?>" />
+                      <p class="form-error-text d-none">Đây là trường bắt buộc</p>
+                    </td>
+                    <!-- <td>
                       <p class="required">Chiết khấu</p>
                       <input class="require-field" type="number" name="discount[]" placeholder="Vui lòng nhập chiết khấu" value="<?php echo $value['discount']; ?>" />
                       <p class="form-error-text d-none">Đây là trường bắt buộc</p>
-                    </td>
+                    </td> -->
                     <td>
                       <span disabled class="button delete delete-edit-record">✕</span>
                     </td>
@@ -537,7 +555,7 @@
                 <tr>
                   <th>Xếp hạng</th>
                   <th>Chi tiêu tối thiểu</th>
-                  <th>Chiết khấu</th>
+                  <!-- <th>Chiết khấu</th> -->
                   <th>Khuyến mãi</th>
                   <th>Số tiền khuyến mãi tối đa cho một đơn hàng</th>
                 </tr>
@@ -553,8 +571,11 @@
                       <span class="show-minimum-spending-final"><?php echo $value['minimum_spending']; ?></span>
                     </td>
                     <td>
-                      <span class="show-discount-final"><?php echo $value['discount']; ?></span>
+                      <span class="show-discount-final"><?php echo $value['color']; ?></span>
                     </td>
+                    <!-- <td>
+                      <span class="show-discount-final"><?php echo $value['discount']; ?></span>
+                    </td> -->
                     <td>
                       <span class="show-price-sale-off-final"><?php echo $value['price_sale_off']; ?></span>
                     </td>

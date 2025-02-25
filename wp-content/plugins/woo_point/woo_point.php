@@ -101,6 +101,7 @@ function pluginprefix_setup_db(){
             is_limit INT DEFAULT 0,
             price_sale_off_max INT NOT NULL,
             text TEXT  NULL,
+            color VARCHAR(255)  NULL,
             discount INT DEFAULT 0,
                     PRIMARY KEY(id))';
             dbDelta($sql);

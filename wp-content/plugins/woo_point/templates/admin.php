@@ -50,6 +50,7 @@
         'name' => $_POST['name'][$i],
         'minimum_spending' => $_POST['minimum_spending'][$i],
         'price_sale_off' => $_POST['price_sale_off'][$i],
+        'color' => $_POST['color'][$i],
         'discount' => $_POST['discount'][$i],
         'text' => $_POST['text'.$_POST['rankId']],
         'price_sale_off_max' => $_POST['price_sale_off_max'][$i],
@@ -60,7 +61,7 @@
       } else {
         $arrayUpdate = array_merge($arrayUpdate, array('is_limit' => 0));
       }
-
+  
       $update = $wpdb->update($tableRank, $arrayUpdate, array('id' => $_POST['rankId']));
     }
     $successMessage = 'Chỉnh sửa hạng thành viên thành công';
