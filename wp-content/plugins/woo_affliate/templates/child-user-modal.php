@@ -2,21 +2,24 @@
 foreach ($usersDisplay as $keyUserModal => $user) {
   $childUser = array();
   $tempIds = array();
+  if($user['ID'] !=12) continue;
   
   $userChild = $wpdb->get_results('select '.$tableUser.'.ID,
   '.$tableUser.'.user_login as `mobile`,'.$tableUser.'.user_nicename ,
    SUM('.$tableUserCommission.'.commission) as commission, 
    SUM('.$tableUserCommission.'.total_order) as total_order, 
-   '.$tableUserCommission.'.create_at,'.$tableUserCommission.'.product_id  ,'.$tablePost.'.post_title 
+   '.$tableUserCommission.'.create_at
    from '.$tableUserCommission.' 
    inner join '.$tableUser.' on '.$tableUser.'.ID = '.$tableUserCommission.'.user_id
-   inner join '.$tablePost.' on '.$tablePost.'.ID = '.$tableUserCommission.'.product_id
    where '.$tableUserCommission.'.user_parent = '.$user['ID'].' and 
    '.$tableUserCommission.'.status = 1 
-    group by '.$tableUser.'.ID, 
+   group by '.$tableUser.'.ID, 
     '.$tableUser.'.user_login, 
+    '.$tableUser.'.user_nicename, 
     '.$tableUserCommission.'.create_at
     order by '.$tableUserCommission.'.ID desc', ARRAY_A);
+    
+ 
     if ($userChild) {
       foreach ($userChild as $child) {
         $tempIds[]=$child['ID'];

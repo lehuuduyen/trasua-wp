@@ -35,7 +35,12 @@ class Paulund_Wp_List_Table
     }
     function themeslug_enqueue_style() {
         wp_enqueue_style( 'add_point_style', $this->plugin_url . '/assets/styles/styles.css' );
+        wp_enqueue_style( 'add_bootstrap_style', $this->plugin_url . '/assets/css/bootstrap.css' );
+        wp_enqueue_style('datatables-css', $this->plugin_url . '/assets/css/jquery.dataTables.min.css');
+        wp_enqueue_script('datatables-js', $this->plugin_url . '/assets/js/jquery.dataTables.min.js');
+       
         wp_enqueue_script( 'add_point_script', $this->plugin_url . '/assets/scripts/scripts.js' );
+        wp_enqueue_script( 'add_bootstrap_script', $this->plugin_url . '/assets/js/bootstrap.js' );
     }
 
     function load_media_files() {
@@ -135,7 +140,21 @@ function pluginprefix_setup_db(){
                     PRIMARY KEY(id))';
             dbDelta($sql);
         }
+        $ptbd_table_name = $wpdb->prefix . 'woo_point_prize';
+        if ($wpdb->get_var("SHOW TABLES LIKE '". $ptbd_table_name ."'"  ) != $ptbd_table_name ) {
 
+            $sql  = 'CREATE TABLE '.$ptbd_table_name.'(
+            id INT AUTO_INCREMENT,
+            quantity INT DEFAULT 0,
+            count INT DEFAULT 0,
+            name  VARCHAR(255) NOT NULL,
+            type INT DEFAULT 1,  
+            point INT DEFAULT 0,  
+            percent INT DEFAULT 0,  
+            status INT DEFAULT 1, 
+                    PRIMARY KEY(id))';
+            dbDelta($sql);
+        }
         $ptbd_table_name = $wpdb->prefix . 'woo_history_user_point';
         if ($wpdb->get_var("SHOW TABLES LIKE '". $ptbd_table_name ."'"  ) != $ptbd_table_name ) {
 

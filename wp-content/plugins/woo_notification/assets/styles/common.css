@@ -1,0 +1,85 @@
+:root {
+  --primary: #2271B1;
+  --secondary: #E91E63;
+}
+
+::placeholder {
+  color: #ddd;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.flex-center {
+  display: flex !important;
+  align-items: center;
+  gap: 5px;
+}
+
+.required::before {
+  display: inline-block;
+  margin-right: 4px;
+  color: var(--secondary);
+  font-size: 16px;
+  font-family: SimSun, sans-serif;
+  line-height: 1;
+  content: "*";
+}
+
+.success-message {
+  position: relative;
+  margin: 5px 0 15px;
+  background: #fff;
+  border: 1px solid #c3c4c7;
+  border-left-color: #00a32a;
+  border-left-width: 4px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.04);
+  padding: 1px 12px;
+}
+
+.success-message > p {
+  margin: 0.5em 0;
+  padding: 2px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.success-message > button {
+  position: absolute;
+  top: 0;
+  right: 1px;
+  border: none;
+  margin: 0;
+  padding: 9px;
+  background: 0 0;
+  color: #787c82;
+  cursor: pointer;
+}
+
+.success-message > button::before {
+  background: 0 0;
+  color: #787c82;
+  content: "\f153";
+  display: block;
+  font: normal 16px/20px dashicons;
+  height: 20px;
+  text-align: center;
+  width: 20px;
+}
+
+.delete {
+  font-weight: bold;
+  color: var(--secondary) !important;
+  border-color: 1px solid var(--secondary) !important;
+}
+
+.form-error-text {
+  margin-top: 2px;
+  font-weight: bold;
+  color: var(--secondary) !important;
+}
+
+span[disabled] {
+  pointer-events: none;
+}

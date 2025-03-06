@@ -25,7 +25,7 @@
         'is_limit' => $_POST['price_sale_off_max'][$i] ? 1 : 0
       );
   
-      $wpdb->insert("wp_woo_point_prize", $arrayInsert);
+      $wpdb->insert($tableRank, $arrayInsert);
     }
 
     $successMessage = 'Thêm hạng thành viên thành công';
@@ -50,7 +50,6 @@
         'name' => $_POST['name'][$i],
         'minimum_spending' => $_POST['minimum_spending'][$i],
         'price_sale_off' => $_POST['price_sale_off'][$i],
-        'color' => $_POST['color'][$i],
         'discount' => $_POST['discount'][$i],
         'text' => $_POST['text'.$_POST['rankId']],
         'price_sale_off_max' => $_POST['price_sale_off_max'][$i],
@@ -61,7 +60,7 @@
       } else {
         $arrayUpdate = array_merge($arrayUpdate, array('is_limit' => 0));
       }
-  
+
       $update = $wpdb->update($tableRank, $arrayUpdate, array('id' => $_POST['rankId']));
     }
     $successMessage = 'Chỉnh sửa hạng thành viên thành công';
@@ -165,9 +164,6 @@
       <li id="tabUser" onclick="hideEditAll()">
         <a href="#tab-2">Danh sách thành viên</a>
       </li>
-      <li id="tabQua" onclick="hideEditAll()">
-        <a href="#tab-3">Danh sách quà </a>
-      </li>
     </ul>
     <div class="tab-content">
       <div id="tab-1" class="tab-pane active">
@@ -176,10 +172,6 @@
       <div id="tab-2" class="tab-pane">
         <h3>Danh sách thành viên</h3>
         <?php require_once(dirname(__FILE__) . '/user-list.php'); ?>
-      </div>
-      <div id="tab-3" class="tab-pane">
-        <h3>Danh sách quà tặng</h3>
-        <?php require_once(dirname(__FILE__) . '/qua-tang.php'); ?>
       </div>
     </div>
     <div id="overlay" class="overlay d-none"></div>
