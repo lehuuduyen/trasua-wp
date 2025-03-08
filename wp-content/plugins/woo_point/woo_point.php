@@ -167,6 +167,8 @@ function pluginprefix_setup_db(){
             minimum_spending INT  NULL,
             points_converted_to_money INT  NULL,
             status INT DEFAULT 1, 
+            prize_id INT NULL, 
+
             create_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  ,
 
                     PRIMARY KEY(id))';

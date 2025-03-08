@@ -1,6 +1,5 @@
 <?php
 global $wpdb;
-$listPrize = $wpdb->get_results('SELECT * FROM wp_woo_point_prize', ARRAY_A);
 if (isset($_POST['submitPrize'])) {
 
   $arrayInsert = array(
@@ -11,16 +10,25 @@ if (isset($_POST['submitPrize'])) {
     'status' => $_POST['status'],
     'percent' => $_POST['percent'],
   );
+ 
+  if(!empty($_POST['id'])){
+    $wpdb->update("wp_woo_point_prize", $arrayInsert,array('id' => $_POST['id']));
+   
+  }else{
+    $wpdb->insert("wp_woo_point_prize", $arrayInsert);
 
-  $wpdb->insert("wp_woo_point_prize", $arrayInsert);
+  }
 
   $successMessage = 'Thêm hạng thành viên thành công';
 }
+$listPrize = $wpdb->get_results('SELECT * FROM wp_woo_point_prize', ARRAY_A);
+
 ?>
+
 <style></style>
 
 <div style="margin:20px 0">
-  <button type="button" class="btn btn-primary" onclick="document.getElementById('exampleModal1').classList.add('show'); " data-bs-toggle="modal1" data-bs-target="#exampleModal1" data-bs-whatever="@mdo">Thêm</button>
+  <button type="button" class="btn btn-primary" onclick="document.getElementById('exampleModal1').classList.add('show');jQuery(`input[name='id']`).val('') " data-bs-toggle="modal1" data-bs-target="#exampleModal1" data-bs-whatever="@mdo">Thêm</button>
 
 </div>
 
@@ -63,6 +71,7 @@ if (isset($_POST['submitPrize'])) {
               <option value="2">Đóng</option>
             </select>
           </div>
+          <input type="hidden" name="id" >
 
         </div>
         <div class="modal1-footer">
@@ -83,6 +92,7 @@ if (isset($_POST['submitPrize'])) {
       <th>Số lượng đổi</th>
       <th>Max</th>
       <th>Loại</th>
+      <th>Số điểm đổi</th>
       <th>Trạng thái</th>
       <th></th>
     </tr>
@@ -94,29 +104,52 @@ if (isset($_POST['submitPrize'])) {
         <td><?php echo $prize['quantity'] ?></td>
         <td><?php echo $prize['count'] ?></td>
         <td><?php echo ($prize['type'] == 1) ? "Mã giảm giá" : "Quà tặng" ?></td>
+        <td><?php echo $prize['point'] ?></td>
+
         <td><?php echo ($prize['status'] == 1) ? "Mở" : "Đóng" ?></td>
-        <td><button type="button" class="btn btn-primary" 
-        data-name="<?= $prize['name']?>"
-        data-count="<?= $prize['count']?>" 
-        data-type="<?= $prize['type']?>" 
-        data-status="<?= $prize['status']?>" 
-        data-max="<?= $prize['max']?>" 
-        onclick="showUpdate(this)"
-        >Cập nhật</button></td>
+        <td><button type="button" class="btn btn-primary"
+            data-id="<?= $prize['id'] ?>"
+            data-name="<?= $prize['name'] ?>"
+            data-count="<?= $prize['count'] ?>"
+            data-type="<?= $prize['type'] ?>"
+            data-status="<?= $prize['status'] ?>"
+            data-max="<?= $prize['max'] ?>"
+            data-point="<?= $prize['point'] ?>"
+            data-percent="<?= $prize['percent'] ?>"
+            onclick="showUpdate(this)">Cập nhật</button></td>
 
       </tr>
     <?php } ?>
   </tbody>
 </table>
 <script>
+  function showUpdate(_this) {
+    document.getElementById('exampleModal1').classList.add('show');
+    let name = jQuery(_this).data('name');
+    let count = jQuery(_this).data('count');
+    let type = jQuery(_this).data('type');
+    let status = jQuery(_this).data('status');
+    let max = jQuery(_this).data('max');
+    let point = jQuery(_this).data('point');
+    let percent = jQuery(_this).data('percent');
+    let id = jQuery(_this).data('id');
+    jQuery("input[name='name']").val(name)
+    jQuery("input[name='count']").val(count)
+    jQuery("input[name='max']").val(max)
+    jQuery("input[name='id']").val(id)
+    jQuery("input[name='point']").val(point)
+    jQuery("input[name='percent']").val(percent)
+    jQuery("select[name='status']").val(status)
+    jQuery("select[name='type']").val(type)
+
+
+
+    }
   jQuery(document).ready(function($) {
 
-    function showUpdate(_this){
-      console.log(jQuery(_this).data('name'))
-
-    } 
-      // document.getElementById('exampleModal1').classList.add('show'); 
     
+    // document.getElementById('exampleModal1').classList.add('show'); 
+
 
     $('#prize').DataTable({
       "paging": true,
