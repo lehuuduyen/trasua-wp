@@ -25,7 +25,7 @@
         'is_limit' => $_POST['price_sale_off_max'][$i] ? 1 : 0
       );
   
-      $wpdb->insert("wp_woo_point_prize", $arrayInsert);
+      $wpdb->insert("wp_woo_rank", $arrayInsert);
     }
 
     $successMessage = 'Thêm hạng thành viên thành công';
