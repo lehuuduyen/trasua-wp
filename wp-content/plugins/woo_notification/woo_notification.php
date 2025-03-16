@@ -239,6 +239,8 @@ function pluginprefix_setup_db2()
             user_id INT  ,
             notification_id INT,
             status INT DEFAULT 0,
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+
             PRIMARY KEY(id))';
             dbDelta($sql);
         }

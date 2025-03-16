@@ -1,0 +1,257 @@
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Phiếu In 80x80</title>
+
+  <style type="text/css">
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Arial";
+    }
+
+    @media print {
+      @page {
+        size: 80mm 80mm;
+        margin-top: 0;
+        margin-right: 1rem;
+        margin-bottom: 0;
+        margin-left: 0;
+        min-height: auto;
+      }
+      html,
+      .content {
+        width: 80mm;
+        height: 85mm;
+        content: ".";
+      }
+    }
+    .content.page-break {
+      display: block;
+      page-break-after: always;
+    }
+    .content {
+      width: 80mm;
+      height: 85mm;
+      background-color: white;
+      position: relative;
+      margin: 4px;
+    }
+    .line-clamp-1 {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    .line-clamp-3 {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+    .line-clamp-4 {
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+    }
+    .line-clamp-5 {
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+    }
+    .line-clamp-6 {
+      display: -webkit-box;
+      -webkit-line-clamp: 6;
+      -webkit-box-orient: vertical;
+    }
+    .module {
+      overflow: hidden;
+    }
+    .line {
+      line-height: 12px;
+    }
+    .items :last-child {
+      border-bottom: 1px dotted;
+    }
+    #process-bar {
+      margin:auto;
+      position: fixed;
+      z-index: 1000;
+      width: 98%;
+      height: 8px;
+      top:  50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+    .w3-light-grey,
+    .w3-hover-light-grey:hover,
+    .w3-light-gray,
+    .w3-hover-light-gray:hover {
+      color: #000 !important;
+      background-color: #f1f1f1 !important;
+    }
+    .w3-round,
+    .w3-round-medium {
+      border-radius: 4px;
+    }
+    .w3-round-large {
+      border-radius: 8px;
+    }
+    .w3-green,
+    .w3-hover-green:hover {
+      color: #ff8328 !important;
+      background-color: #ff8328 !important;
+      height: 8px;
+      font-size: 1px;
+    }
+  </style>
+</head>
+
+<div id="process-bar" class="w3-light-grey w3-round">
+  <div id="myBar" class="w3-container w3-green w3-round-large" style="width: 0%">background</div>
+  <div
+          id="value-percent"
+          style="text-align: center; font-size: 12px; margin-top: 2px; color: #ff8328; font-weight: bold"
+  >
+    Đang tải 0%
+  </div>
+</div>
+
+<script>
+  function processBar(stt, total) {
+    elem = document.getElementById("myBar")
+    value = document.getElementById("value-percent")
+    if (elem) {
+      if (stt == total) {
+        elem.style.width = 100 + "%"
+        value.innerHTML = "Đã tải " + 100 + "%"
+        document.getElementById("process-bar").remove()
+
+        window.print()
+      } else {
+        width = ((stt / total) * 100).toFixed(0)
+        elem.style.width = width + "%"
+        value.innerHTML = "Đang tải " + width * 1 + "%"
+      }
+    }
+  }
+</script>
+
+<div class="content page-break line" style="font-weight: bold; position: relative">
+  <div style="padding: 2px; display: flex; align-items: center; font-size: 10px">
+
+    <div style="width: 35%; border-right: 1px dotted; padding-right: 4px">
+      <div class="module line-clamp-2">0936307069</div>
+      <div style="display: flex; align-items: center; justify-content: space-around">
+
+        <div style="width: 30%; height: 20px">
+          <img style="width: 100%; height: 100%" src="https://storage.googleapis.com/online-dev-public/a5%2F2022%2FNovember%2F10%2F%5B03eb6406-a50c-4bbf-9844-be761d0ce8bf%5DVector.png" />
+        </div>
+      </div>
+    </div>
+
+    <div style="padding-left: 4px; width: 65%">
+      <div style="display: flex; align-items: center; justify-content: space-between">
+        <div class="module line-clamp-2">Toản</div>
+        <div>******5678</div>
+      </div>
+      <div class="module line-clamp-2">Hà Nội</div>
+    </div>
+  </div>
+  <div style="padding: 2px; border-bottom: 1px dotted">
+    <img
+            width="100%"
+            height="auto"
+            src="https://online-gateway.ghn.vn/barcode/api/v1/barcode/generate?code=LLUBV4&type=128A&width=820&height=150"
+            atl="barcode"
+            onload="processBar(parseInt('1'),'1')"
+    />
+    <div
+            style="display: flex; justify-content:  center ; align-items: center; padding-top: 2px;"
+    >
+
+      <div>
+        <div
+                style="
+                        font-size: 12px;
+                        font-weight: bold;
+                        display: flex;
+                        justify-content: space-around;
+                        padding-top: 2px;
+                    "
+        >
+          <div>LLUBV4</div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <div
+          style="font-size: 11px; padding: 2px 0; border-bottom: 1px dotted; text-transform: uppercase"
+          class="module line-clamp-1"
+  >
+    Xã An Thới Đông, Huyện Cần Giờ
+  </div>
+  <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px dotted">
+
+    <b style="text-align: center; font-size: 28px; width: 80%">
+
+      <span>0-000-0-00</span>
+    </b>
+
+    <div style="height: 50px; width: 50px">
+      <img
+              width="100%"
+              height="100%"
+              height="auto"
+              src="https://online-gateway.ghn.vn/barcode/api/v1/barcode/generate?code=LLUBV4&type=QR&width=200&height=200"
+              atl="barcode"
+      />
+    </div>
+  </div>
+
+  <div style="font-size: 14px; padding: 2px 0; border-bottom: 1px dotted" class="module line-clamp-3">
+    <span style="font-size: 10px">Thu:</span>
+    <b>0 </b>
+  </div>
+
+
+
+  <div style="font-size: 11px; padding: 2px 0; border-top: 1px dotted; text-transform: uppercase">
+    Cho xem hàng, không cho thử
+  </div>
+
+  <div class="items">
+
+  </div>
+
+
+  <div
+          style="
+            display: flex;
+            font-size: 8px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 0;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        "
+  >
+    <div>Ký tên</div>
+    <div>Xác nhận đã nhận hàng nguyên vẹn</div>
+    <img src="https://5sao.ghn.dev/images/logo-ghn/GHN_Black.png" style="width: 35%" />
+    <div>1/1</div>
+  </div>
+</div>
+

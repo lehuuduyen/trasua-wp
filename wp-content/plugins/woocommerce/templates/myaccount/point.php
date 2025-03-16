@@ -22,7 +22,7 @@ defined('ABSPATH') || exit;
 
 do_action('woocommerce_before_account_orders', $has_orders); ?>
 
-<?php if ($listPoint) : ?>
+<?php if ($listPoint) { ?>
 
 	<table class="woocommerce-orders-table woocommerce-MyAccount-orders shop_table shop_table_responsive my_account_orders account-orders-table">
 		<thead>
@@ -35,17 +35,29 @@ do_action('woocommerce_before_account_orders', $has_orders); ?>
 
 		<tbody>
 			<?php
-			if (count($listAffilate) > 0) {
+			if (count($listPoint) > 0) {
 
 				foreach ($listPoint as $award) {
+					if($award->status ==2){
+
 			?>
 					<tr class="woocommerce-orders-table__row woocommerce-orders-table__row--status-order">
 						<th class="woocommerce-orders-table__cell woocommerce-orders-table__cell-" scope="row"><?= date('d/m/Y', strtotime($award->create_at)) ?></th>
-						<th class="woocommerce-orders-table__cell woocommerce-orders-table__cell-" scope="row"><?= $award->point ?></th>
+						<th class="woocommerce-orders-table__cell woocommerce-orders-table__cell-" scope="row" style="color:red"><?= $award->point ?></th>
 						<th class="woocommerce-orders-table__cell woocommerce-orders-table__cell-" scope="row"><?= $award->award ?></th>
 
 					</tr>
 				<?php
+					}else{
+						?>
+						<tr class="woocommerce-orders-table__row woocommerce-orders-table__row--status-order">
+						<th class="woocommerce-orders-table__cell woocommerce-orders-table__cell-" scope="row"><?= date('d/m/Y', strtotime($award->create_at)) ?></th>
+						<th class="woocommerce-orders-table__cell woocommerce-orders-table__cell-" scope="row" style="color:green"><?= $award->point ?></th>
+						<th class="woocommerce-orders-table__cell woocommerce-orders-table__cell-" scope="row"><a style="color:blue" href="/my-account/view-order/<?= $award->order_id ?>">Đơn hàng <?= $award->order_id ?></a></th>
+
+					</tr>
+						<?php
+					}
 				}
 			} else {
 				?>
@@ -58,10 +70,10 @@ do_action('woocommerce_before_account_orders', $has_orders); ?>
 		</tbody>
 	</table>
 
-	<!-- <?php do_action('woocommerce_before_account_orders_pagination'); ?> -->
+	<?php do_action('woocommerce_before_account_orders_pagination'); ?>
 
 
 
 
 
-<?php do_action('woocommerce_after_account_orders', $has_orders); ?>
+<?php do_action('woocommerce_after_account_orders', $has_orders);} ?>

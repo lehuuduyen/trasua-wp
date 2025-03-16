@@ -1,0 +1,63 @@
+select#billing_state, select#billing_city, select#billing_address_2,
+select#shipping_state, select#shipping_city, select#shipping_address_2 {
+    padding: 0 5px;
+}
+.ntco_loading:after {
+    -webkit-animation: ntco_spin_pro 500ms infinite linear;
+    animation: ntco_spin_pro 500ms infinite linear;
+    border: 2px solid #9E9E9E;
+    border-radius: 32px;
+    border-right-color: transparent !important;
+    border-top-color: transparent !important;
+    content: "";
+    display: block;
+    height: 16px;
+    top: 50%;
+    margin-top: -8px;
+    left: 50%;
+    margin-left: -8px;
+    position: absolute;
+    width: 16px;
+}
+
+.ntco_loading {
+    position: relative;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.ntco_loading:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    display: inherit !important;
+    z-index: 2;
+}
+
+@-webkit-keyframes ntco_spin_pro {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes ntco_spin_pro {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}

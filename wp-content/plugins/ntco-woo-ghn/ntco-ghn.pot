@@ -1,0 +1,633 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NTCO - GHN\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-05 08:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.11; wp-6.6.2\n"
+"X-Domain: ntco-ghn"
+
+#: ntco-woo-ghn-main.php:1032
+#, php-format
+msgid "%s không tồn tại."
+msgstr ""
+
+#: includes/class-ghn-shipping.php:593
+#, php-format
+msgid "<strong>Mã vận đơn:</strong> %s"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:572
+#, php-format
+msgid "<strong>Trạng thái:</strong> %s"
+msgstr ""
+
+#: includes/ghn-creat-order-html.php:119
+msgid "Ca lấy hàng"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:927
+msgid "cao"
+msgstr ""
+
+#: ntco-woo-ghn-main.php:610
+msgid "Check đơn hàng"
+msgstr ""
+
+#: includes/options-generals.php:34 includes/ghn-creat-order-html.php:113
+#: includes/class-ghn-shipping.php:935
+msgid "Cho thử hàng"
+msgstr ""
+
+#: includes/options-generals.php:33 includes/ghn-creat-order-html.php:109
+#: includes/class-ghn-shipping.php:934
+msgid "Cho xem hàng, không cho thử"
+msgstr ""
+
+#: includes/options-allhubs.php:143
+msgid "Chưa có kho hàng nào"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:576
+msgid "Chỉnh sửa đơn hàng"
+msgstr ""
+
+#: includes/ghn-creat-order-html.php:6 includes/ghn-creat-order-html.php:8
+#: includes/class-ghn-shipping.php:815 includes/class-ghn-shipping.php:818
+msgid "Chọn cửa hàng/kho"
+msgstr ""
+
+#: ntco-woo-ghn-main.php:145 ntco-woo-ghn-main.php:173
+msgid "Chọn khu vực"
+msgstr ""
+
+#: includes/options-generals.php:50
+msgid "Chọn một trang"
+msgstr ""
+
+#: includes/options-allhubs.php:41
+msgid "Chọn tỉnh/quận huyện mà cửa hàng/kho này sẽ giao hàng."
+msgstr ""
+
+#: includes/options-allhubs.php:108
+msgid "Chọn/Bỏ toàn bộ"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1377
+msgid "Chờ thanh toán/chuyển COD"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1352
+msgid "Chờ trả hàng"
+msgstr ""
+
+#: ntco-woo-ghn-main.php:111 includes/options-page.php:46
+msgid "Cài đặt GHN"
+msgstr ""
+
+#: includes/options-webhook.php:5
+msgid "Cài đặt đường dẫn (Webhook)"
+msgstr ""
+
+#: includes/ghn-creat-order-html.php:206 includes/class-ghn-shipping.php:1002
+msgid "Có"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1020
+msgid "Cập nhật"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1270
+msgid "Cập nhật thành công!..."
+msgstr ""
+
+#: includes/options-allhubs.php:83
+msgid "Cập nhật thông tin"
+msgstr ""
+
+#: includes/options-page.php:48
+msgid "Cập nhật trạng thái tự động"
+msgstr ""
+
+#: includes/options-page.php:47
+msgid "Cửa hàng/Kho"
+msgstr ""
+
+#: includes/options-generals.php:64
+msgid "Danh sách sp trong đơn hàng"
+msgstr ""
+
+#: includes/options-generals.php:57
+msgid "Debug"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:925
+msgid "dài"
+msgstr ""
+
+#: includes/ghn-creat-order-html.php:194 includes/class-ghn-shipping.php:971
+#: includes/class-ghn-shipping.php:1101
+msgid "Dự kiến giao"
+msgstr ""
+
+#: includes/options-allhubs.php:64
+msgid "Email"
+msgstr ""
+
+#: includes/options-generals.php:79
+msgid "Email thông báo"
+msgstr ""
+
+#: includes/ghn-creat-order-html.php:140 includes/class-ghn-shipping.php:941
+msgid "Ghi chú"
+msgstr ""
+
+#: includes/options-generals.php:30 includes/ghn-creat-order-html.php:103
+#: includes/class-ghn-shipping.php:931
+msgid "Ghi chú bắt buộc"
+msgstr ""
+
+#: includes/options-generals.php:37
+msgid "Ghi chú bắt buộc khi đăng đơn lên GHN"
+msgstr ""
+
+#. Description of the plugin
+msgid "GHN"
+msgstr ""
+
+#: includes/options-generals.php:12
+msgid "GHN API"
+msgstr ""
+
+#: includes/options-page.php:8
+msgid "Giao hàng nhanh"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:549
+msgid "Giao Hàng NHANH (GHN)"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1342
+msgid "Giao thành công"
+msgstr ""
+
+#: includes/ghn-creat-order-html.php:73 includes/class-ghn-shipping.php:915
+msgid "Giá trị gói hàng"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:948
+msgid "Gói cước"
+msgstr ""
+
+#: includes/ghn-creat-order-html.php:67 includes/class-ghn-shipping.php:907
+msgid "Gói hàng"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1001
+msgid "Gửi hàng tại điểm giao dịch (-2.000đ):"
+msgstr ""
+
+#: includes/ghn-creat-order-html.php:204
+msgid "Gửi hàng tại điểm giao dịch:"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1374
+msgid "Hàng bị hư hỏng"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1387
+msgid "Hàng thất lạc"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1325
+msgid "Hàng đã được lưu kho"
+msgstr ""
+
+#: ntco-woo-ghn-main.php:137 ntco-woo-ghn-main.php:167
+#: ntco-woo-ghn-main.php:502
+msgid "Họ tên"
+msgstr ""
+
+#: includes/ghn-creat-order-html.php:28 includes/class-ghn-shipping.php:846
+msgid "Họ và tên"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1021
+msgid "Hủy chỉnh sửa"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:626
+msgid "Hủy tạo"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:596
+msgid "Hủy đơn hàng"
+msgstr ""
+
+#: ntco-woo-ghn-main.php:610
+msgid "In hóa đơn GHN"
+msgstr ""
+
+#: ntco-woo-ghn-main.php:610
+msgid "In hóa đơn theo mẫu riêng"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:599
+msgid "In vận đơn theo mẫu GHN"
+msgstr ""
+
+#: includes/options-generals.php:70
+msgid "Khai giá hàng hoá"
+msgstr ""
+
+#: includes/options-allhubs.php:39
+msgid "Kho"
+msgstr ""
+
+#: includes/options-allhubs.php:76
+msgid "Kho chính"
+msgstr ""
+
+#: ntco-woo-ghn-main.php:145 ntco-woo-ghn-main.php:173
+#: includes/ghn-creat-order-html.php:44 includes/options-allhubs.php:68
+#: includes/class-ghn-shipping.php:862
+msgid "Khu vực"
+msgstr ""
+
+#: includes/options-allhubs.php:42
+msgid "Khu vực bán hàng"
+msgstr ""
+
+#: includes/options-allhubs.php:106
+#, php-format
+msgid "Khu vực bán hàng của kho #%s"
+msgstr ""
+
+#: includes/ghn-creat-order-html.php:208 includes/class-ghn-shipping.php:1003
+msgid "Không"
+msgstr ""
+
+#: includes/options-generals.php:44
+msgid "Không bắt buộc. Nếu là đối tác hãy liên hệ với GHN để có mã này."
+msgstr ""
+
+#: includes/options-generals.php:35 includes/class-ghn-shipping.php:936
+msgid "Không cho thử hàng"
+msgstr ""
+
+#: includes/ghn-creat-order-html.php:117
+msgid "Không cho xem hàng"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1307
+msgid "Không xác định"
+msgstr ""
+
+#: includes/ghn-creat-order-html.php:83 includes/class-ghn-shipping.php:919
+msgid "Khối lượng"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:579
+msgid "Kiểm tra đơn hàng"
+msgstr ""
+
+#: includes/options-generals.php:94 includes/class-ghn-shipping.php:1570
+msgid "Kích hoạt"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1570
+msgid "Kích hoạt tính phí vận chuyển bằng GHN"
+msgstr ""
+
+#: includes/ghn-creat-order-html.php:89 includes/class-ghn-shipping.php:923
+msgid "Kích thước (cm)"
+msgstr ""
+
+#: includes/options-webhook.php:34
+msgid "Làm mới Webhook URL"
+msgstr ""
+
+#: includes/options-allhubs.php:131
+msgid "Lưu"
+msgstr ""
+
+#: includes/options-webhook.php:43
+msgid "Lưu Webhook URL"
+msgstr ""
+
+#: includes/options-generals.php:26
+#, php-format
+msgid "Lấy token key <a href=\"%s\" target=\"_blank\">tại đây</a>"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1274 includes/class-ghn-shipping.php:1421
+#: includes/class-ghn-shipping.php:1459
+msgid "Lỗi không xác định"
+msgstr ""
+
+#: includes/options-allhubs.php:48
+msgid "Mã kho"
+msgstr ""
+
+#: includes/ghn-creat-order-html.php:169 includes/class-ghn-shipping.php:992
+msgid "Mã khuyến mại:"
+msgstr ""
+
+#: includes/options-generals.php:41
+msgid "Mã liên kết"
+msgstr ""
+
+#: includes/ghn-creat-order-html.php:69 includes/class-ghn-shipping.php:911
+msgid "Mã đơn hệ thống"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1570
+msgid "Mô tả cho phương thức vận chuyển"
+msgstr ""
+
+#: includes/options-generals.php:16
+msgid "Môi trường"
+msgstr ""
+
+#: includes/ghn-creat-order-html.php:146 includes/class-ghn-shipping.php:984
+msgid "Người gửi"
+msgstr ""
+
+#: includes/ghn-creat-order-html.php:148 includes/class-ghn-shipping.php:985
+msgid "Người nhận"
+msgstr ""
+
+#: includes/ghn-creat-order-html.php:144 includes/class-ghn-shipping.php:983
+msgid "Người thanh toán:"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1345
+msgid "Nhân viên giao hàng thất bại"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1364
+msgid "Nhân viên trả hàng thất bại"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1338
+msgid "Nhân viên đang thu tiền người nhận"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1361
+msgid "Nhân viên đang đi trả hàng"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1321
+msgid "Nhân viên đã lấy hàng"
+msgstr ""
+
+#: ntco-woo-ghn-main.php:229 ntco-woo-ghn-main.php:479
+msgid "No value"
+msgstr ""
+
+#. Author of the plugin
+msgid "NTCO"
+msgstr ""
+
+#. Name of the plugin
+msgid "NTCO - GHN"
+msgstr ""
+
+#: includes/options-generals.php:107
+msgid "Nội dung email"
+msgstr ""
+
+#: ntco-woo-ghn-main.php:446
+msgid "Phone number of the recipient"
+msgstr ""
+
+#: ntco-woo-ghn-main.php:868
+#, php-format
+msgid "Phát triển bởi %sLê Văn Toản%s."
+msgstr ""
+
+#: includes/options-allhubs.php:72
+msgid "Phường xã"
+msgstr ""
+
+#: includes/ghn-creat-order-html.php:40 includes/class-ghn-shipping.php:858
+msgid "Phường/Xã"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:833
+msgid ""
+"Phần này là tự động. Trong trường hợp thay đổi chi nhánh có thể sẽ làm phí "
+"vận chuyển thay đổi."
+msgstr ""
+
+#: ntco-woo-ghn-main.php:145 ntco-woo-ghn-main.php:173
+msgctxt "placeholder"
+msgid "Chọn khu vực"
+msgstr ""
+
+#: ntco-woo-ghn-main.php:147 ntco-woo-ghn-main.php:175
+#: ntco-woo-ghn-main.php:508
+msgctxt "placeholder"
+msgid "Chọn xã/Phường/thị trấn"
+msgstr ""
+
+#: ntco-woo-ghn-main.php:167
+msgctxt "placeholder"
+msgid "Họ tên của bạn"
+msgstr ""
+
+#: ntco-woo-ghn-main.php:137 ntco-woo-ghn-main.php:502
+msgctxt "placeholder"
+msgid "Nhập họ tên của bạn"
+msgstr ""
+
+#: ntco-woo-ghn-main.php:169
+msgctxt "placeholder"
+msgid "Số điện thoại"
+msgstr ""
+
+#: ntco-woo-ghn-main.php:152 ntco-woo-ghn-main.php:180
+msgctxt "placeholder"
+msgid "Ví dụ: số 20 Ngõ 90"
+msgstr ""
+
+#: ntco-woo-ghn-main.php:492
+msgid "Province/City"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:926
+msgid "rộng"
+msgstr ""
+
+#: ntco-woo-ghn-main.php:602
+msgid "Settings"
+msgstr ""
+
+#: ntco-woo-ghn-main.php:458
+msgid "Shipping Phone:"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:878
+msgid "SL"
+msgstr ""
+
+#: ntco-woo-ghn-main.php:169 includes/ghn-creat-order-html.php:32
+#: includes/class-ghn-shipping.php:850
+msgid "Số điện thoại"
+msgstr ""
+
+#: includes/options-allhubs.php:56
+msgid "Số điện thoại liên hệ"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1570
+msgid "Tiêu đề"
+msgstr ""
+
+#: includes/options-generals.php:101
+msgid "Tiêu đề email"
+msgstr ""
+
+#: includes/ghn-creat-order-html.php:150 includes/class-ghn-shipping.php:988
+msgid "Tiền thu hộ (COD):"
+msgstr ""
+
+#: includes/options-generals.php:23
+msgid "Token Key"
+msgstr ""
+
+#: includes/options-generals.php:48
+msgid "Tracking"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1412
+#, php-format
+msgid "Trạng thái đơn hàng: %s"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1368
+msgid "Trả thành công"
+msgstr ""
+
+#: includes/options-allhubs.php:52
+msgid "Tên người liên hệ"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:876
+msgid "Tên sp"
+msgstr ""
+
+#: includes/options-allhubs.php:107
+msgid "Tìm nhanh theo tên"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:584
+msgid "Tạo vận đơn GHN"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:625
+msgid "Tạo đơn hàng"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1570
+msgid "Vận chuyển qua GHN"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1442
+msgid "Webhook URL không được để trống!"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:877
+msgid "Weight"
+msgstr ""
+
+#: ntco-woo-ghn-main.php:147 ntco-woo-ghn-main.php:175
+#: ntco-woo-ghn-main.php:508
+msgid "Xã/Phường/thị trấn"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1335
+msgid "Đang giao hàng"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1328
+msgid "Đang luân chuyển hàng"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1355
+msgid "Đang luân chuyển hàng trả"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1315
+msgid "Đang lấy hàng"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1331
+msgid "Đang phân loại hàng hóa"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1358
+msgid "Đang phân loại hàng trả"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1318
+msgid "Đang thu tiền người gửi"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1348
+msgid "Đang đợi trả hàng về cho người gửi"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1384
+msgid "Đã hủy"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1299
+msgid "Đã hủy đơn hàng thành công"
+msgstr ""
+
+#: includes/options-allhubs.php:132
+msgid "Đóng"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:624 includes/class-ghn-shipping.php:810
+msgid "Đăng đơn hàng lên GHN"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1194
+msgid "Đăng đơn thành công!..."
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1380
+msgid "Đơn hàng hoàn tất"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1311
+msgid "Đơn hàng mới tạo"
+msgstr ""
+
+#: includes/class-ghn-shipping.php:1371
+msgid "Đơn hàng ngoại lệ không nằm trong quy trình"
+msgstr ""
+
+#: includes/options-webhook.php:30
+msgid "Đường dẫn cập nhật trạng thái tự động (Webhook URL)"
+msgstr ""
+
+#: includes/ghn-creat-order-html.php:36 includes/options-allhubs.php:60
+#: includes/class-ghn-shipping.php:854
+msgid "Địa chỉ"
+msgstr ""
+
+#: includes/options-allhubs.php:9
+msgid "Đồng bộ kho hàng từ GHN"
+msgstr ""

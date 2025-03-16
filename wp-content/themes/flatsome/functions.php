@@ -37,7 +37,12 @@ function custom_page_content()
     global $wpdb;
     $prefix = $wpdb->prefix;
 
-    $history = $wpdb->get_results("SELECT * FROM " . $prefix . "woo_history_user_point WHERE (user_id = '" . get_current_user_id() . "' AND status = '2')");
+    $history = $wpdb->get_results("SELECT h.*, p.name as award 
+ FROM " . $prefix . "woo_history_user_point AS h
+ LEFT JOIN " . $prefix . "woo_point_prize AS p 
+    ON p.id = h.prize_id
+ WHERE h.user_id = '" . get_current_user_id() . "' 
+   AND h.status = '2' OR h.status = '1' ");
 
 
     wc_get_template(
@@ -45,7 +50,7 @@ function custom_page_content()
         array(
             'current_page'    => absint($current_page),
             'listPoint' => $history,
-            'has_orders'      => 0 < count($history),
+            'has_orders'      => count($history) >0,
             'wp_button_class' => wc_wp_theme_get_element_class_name('button') ? ' ' . wc_wp_theme_get_element_class_name('button') : '',
         )
     );
