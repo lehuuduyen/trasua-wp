@@ -35,7 +35,7 @@ class Paulund_Wp_List_Table
     }
     function themeslug_enqueue_style() {
         wp_enqueue_style( 'add_point_style', $this->plugin_url . '/assets/styles/styles.css' );
-        // wp_enqueue_style( 'add_bootstrap_style', $this->plugin_url . '/assets/css/bootstrap.css' );
+        wp_enqueue_style( 'add_bootstrap_style', $this->plugin_url . '/assets/css/bootstrap.css' );
         wp_enqueue_style('datatables-css', $this->plugin_url . '/assets/css/jquery.dataTables.min.css');
         wp_enqueue_script('datatables-js', $this->plugin_url . '/assets/js/jquery.dataTables.min.js');
        
