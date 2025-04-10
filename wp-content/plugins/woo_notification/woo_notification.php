@@ -4,7 +4,7 @@
  * Plugin Name: woo_notification
  * Plugin URI: https://www.yourwebsiteurl.com/
  * Description: This is the very first plugin I ever created.
- * Version: 1.0
+ * Version: 1.0 ExponentPushToken[YjVosiEOAvr2jlwznM8tNd]
  * Author: WOO_notification
  * Author URI: http://yourwebsiteurl.com/
  **/
@@ -33,10 +33,21 @@ if (isset($_POST['submitNotification'])) {
     $listUser = $wpdb->get_results("SELECT ID FROM " . $prefix . "users");
 
 
-    // check update update_phuong
+    // check thêm thông báo user
     foreach ($listUser as $key => $val) {
         $wpdb->query($wpdb->prepare("INSERT INTO " . $prefix . "woo_user_notification  (user_id,notification_id) VALUES ('" . $val->ID . "','" . $idNoti . "'); "));
     }
+    $query = "SELECT DISTINCT token FROM {$prefix}woo_user_key_notification";
+    $listToken = $wpdb->get_col($query);
+  
+    foreach ($listToken as  $token) {
+        $wpdb->query($wpdb->prepare("INSERT INTO " . $prefix . "woo_send_notification  (token,content) VALUES ('" . $token . "','" . $content . "'); "));
+    }
+    // check Gửi thông báo
+
+
+
+
 }
 if (! class_exists('WP_List_Table')) {
     require_once(ABSPATH . 'wp-admin/includes/class-wp-list-table.php');
@@ -229,6 +240,7 @@ function pluginprefix_setup_db2()
             PRIMARY KEY(id))';
             dbDelta($sql);
         }
+        
         $ptbd_table_name = $wpdb->prefix . 'woo_user_notification';
 
         dbDelta("SET GLOBAL TIME_ZONE = '+07:00';");
@@ -241,6 +253,35 @@ function pluginprefix_setup_db2()
             status INT DEFAULT 0,
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
 
+            PRIMARY KEY(id))';
+            dbDelta($sql);
+        }
+        $ptbd_table_name = $wpdb->prefix . 'woo_user_key_notification';
+
+        dbDelta("SET GLOBAL TIME_ZONE = '+07:00';");
+        if ($wpdb->get_var("SHOW TABLES LIKE '" . $ptbd_table_name . "'") != $ptbd_table_name) {
+
+            $sql  = 'CREATE TABLE ' . $ptbd_table_name . '(
+            id BIGINT AUTO_INCREMENT,
+            user_id INT  ,
+            token VARCHAR(255),
+            status INT DEFAULT 1,
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+
+            PRIMARY KEY(id))';
+            dbDelta($sql);
+        }
+        $ptbd_table_name = $wpdb->prefix . 'woo_send_notification';
+
+        dbDelta("SET GLOBAL TIME_ZONE = '+07:00';");
+        if ($wpdb->get_var("SHOW TABLES LIKE '" . $ptbd_table_name . "'") != $ptbd_table_name) {
+
+            $sql  = 'CREATE TABLE ' . $ptbd_table_name . '(
+            id BIGINT AUTO_INCREMENT,
+            token VARCHAR(255),
+            content text CHARACTER SET utf8mb4   NULL,
+            status INT DEFAULT 1,
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
             PRIMARY KEY(id))';
             dbDelta($sql);
         }
