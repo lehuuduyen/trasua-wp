@@ -127,7 +127,7 @@ function aff_update_wc_order_status_function($order_id, $order) {
             // $trafficId = $traffic[0]->id;
             // $wpdb->query($wpdb->prepare("UPDATE ".$prefix."woo_history_share_link SET status=0 WHERE user_id=$userId AND status = 1"));
             // $wpdb->query($wpdb->prepare("UPDATE ".$prefix."woo_history_share_link SET status=2 WHERE id=$trafficId"));
-            $wpdb->query($wpdb->prepare("UPDATE ".$prefix."woo_history_user_commission SET status=6 WHERE id=$id"));
+            $wpdb->query($wpdb->prepare("UPDATE ".$prefix."woo_history_user_commission SET status=1 WHERE id=$id"));
 
           // }
       }
