@@ -2,6 +2,7 @@ const _hiddenClass = 'd-none';
 const _activeClass = 'active';
 
 function openLowerModal(id) {
+    console.log(`.modal-lower-level-${id}`)
   const modalOverlay = document.querySelector('.overlay');
   const modalLowerLevel = document.querySelector(`.modal-lower-level-${id}`);
 

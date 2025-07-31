@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "vn.gsmilkteaproduct.gsmilkteaproduct",
+      "sha256_cert_fingerprints": [
+        "FB:29:14:CE:46:96:B2:13:E5:2D:69:D3:BB:2B:59:19:30:08:E4:F3:49:32:B1:10:D2:53:58:4A:51:38:34:80"
+      ]
+    }
+  }
+]

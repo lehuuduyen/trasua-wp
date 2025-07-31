@@ -1,4 +1,6 @@
 <?php
+define( 'WP_CACHE', true );
+
 
 //Begin Really Simple Security session cookie settings
 @ini_set('session.cookie_httponly', true);
@@ -29,13 +31,13 @@
 define( 'DB_NAME', 'trasua' );
 
 /** Database username */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', 'trasua' );
 
 /** Database password */
-define( 'DB_PASSWORD', 'root' );
+define( 'DB_PASSWORD', 'eT4H8jB8HAHnp36C' );
 
 /** Database hostname */
-define( 'DB_HOST', 'mysql' );
+define( 'DB_HOST', '127.0.0.1' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
@@ -92,6 +94,7 @@ $table_prefix = 'wp_';
  * @link https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/
  */
 define( 'WP_DEBUG', false );
+define('FS_METHOD', 'direct');
 
 /* Add any custom values between this line and the "stop editing" line. */
 
@@ -106,3 +109,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
+define('DISALLOW_FILE_EDIT' , false);
+
+define('DISALLOW_FILE_Mods' , false);

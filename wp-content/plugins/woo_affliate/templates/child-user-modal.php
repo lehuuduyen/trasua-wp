@@ -2,48 +2,45 @@
 foreach ($usersDisplay as $keyUserModal => $user) {
   $childUser = array();
   $tempIds = array();
-  if($user['ID'] !=12) continue;
-  
+
   $userChild = $wpdb->get_results('select '.$tableUser.'.ID,
   '.$tableUser.'.user_login as `mobile`,'.$tableUser.'.user_nicename ,
    SUM('.$tableUserCommission.'.commission) as commission, 
-   SUM('.$tableUserCommission.'.total_order) as total_order, 
-   '.$tableUserCommission.'.create_at
-   from '.$tableUserCommission.' 
+   SUM('.$tableUserCommission.'.total_order) as total_order   from '.$tableUserCommission.' 
    inner join '.$tableUser.' on '.$tableUser.'.ID = '.$tableUserCommission.'.user_id
    where '.$tableUserCommission.'.user_parent = '.$user['ID'].' and 
    '.$tableUserCommission.'.status = 1 
    group by '.$tableUser.'.ID, 
     '.$tableUser.'.user_login, 
-    '.$tableUser.'.user_nicename, 
-    '.$tableUserCommission.'.create_at
+    '.$tableUser.'.user_nicename
     order by '.$tableUserCommission.'.ID desc', ARRAY_A);
     
  
     if ($userChild) {
+
       foreach ($userChild as $child) {
         $tempIds[]=$child['ID'];
         array_push($childUser, $child);
       }
     }
-  $userClickShare = $wpdb->get_results('SELECT * FROM ' . $tableShareLink . ' 
-  INNER JOIN '.$tableUser.' ON '.$tableUser.'.ID=' . $tableShareLink . '.user_id 
-  INNER join '.$tablePost.' ON '.$tablePost.'.ID = '.$tableShareLink.'.product
-   where ' . $tableShareLink . '.status != 2 AND user_parent = ' . $user['ID'].' AND ' . $tableShareLink . '.user_id not in ('.implode(",",$tempIds).') 
-  group by '.$tableUser.'.ID, 
-    '.$tableUser.'.user_login, 
-    '.$tableShareLink.'.create_at ', ARRAY_A);
-  $tempClick =[];
-  foreach($userClickShare as $val){
-      if(!in_array($val['ID'],$tempClick)){
-          $tempClick[]=$val['ID'];
-          $val['commission'] = 0;
-          $val['total_order'] = 0;
-          $val['product_id'] = $val['product'];
-          array_push($childUser, $val);
+//   $userClickShare = $wpdb->get_results('SELECT * FROM ' . $tableShareLink . ' 
+//   INNER JOIN '.$tableUser.' ON '.$tableUser.'.ID=' . $tableShareLink . '.user_id 
+//   INNER join '.$tablePost.' ON '.$tablePost.'.ID = '.$tableShareLink.'.product
+//   where ' . $tableShareLink . '.status != 2 AND user_parent = ' . $user['ID'].' AND ' . $tableShareLink . '.user_id not in ('.implode(",",$tempIds).') 
+//   group by '.$tableUser.'.ID, 
+//     '.$tableUser.'.user_login, 
+//     '.$tableShareLink.'.create_at ', ARRAY_A);
+//   $tempClick =[];
+//   foreach($userClickShare as $val){
+//       if(!in_array($val['ID'],$tempClick)){
+//           $tempClick[]=$val['ID'];
+//           $val['commission'] = 0;
+//           $val['total_order'] = 0;
+//           $val['product_id'] = $val['product'];
+//           array_push($childUser, $val);
 
-      }
-  }
+//       }
+//   }
  
 
 

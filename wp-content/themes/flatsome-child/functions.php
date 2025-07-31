@@ -529,13 +529,18 @@ function fnCategoriesHome(){
 	$page_id = get_queried_object_id();
     
 	ob_start();
-	if( have_rows('danh_muc_san_pham_home','option') ):
+	if( have_rows('danh_muc_san_pham','option') ):
 	echo '<div class="row  equalize-box row-small tch-categories ">';
 	$dem = 0;
-    while( have_rows('danh_muc_san_pham_home','option') ) : the_row();
-        $hinh_anh = get_sub_field('hinh_anh');
-	    $tieu_de = get_sub_field('tieu_de');
-	    $link = get_sub_field('link');
+    while( have_rows('danh_muc_san_pham','option') ) : the_row();
+
+	     $hinh_anh = get_sub_field('hinh_anh');
+	     $img_atts = wp_get_attachment_image_src($hinh_anh, 'thumbnail');
+	     
+         $danh_muc = get_sub_field('danh_muc')->term_id;
+        $hinh_anh = $img_atts[0];
+	    $tieu_de = $danh_muc->name;
+	    $link = $danh_muc;
     ?>
         <div class="col">
 			<div class="col-inner">
@@ -555,3 +560,20 @@ endif;
     return $contents;
 }
 add_shortcode('categoryhome','fnCategoriesHome');
+
+
+
+function taiapp_custom_rewrite_tag_rule() {
+    add_rewrite_tag('%taiapp_code%', '([^&]+)');
+    add_rewrite_rule('^taiapp/([^/]*)/?$', 'index.php?taiapp_code=$matches[1]', 'top');
+}
+add_action('init', 'taiapp_custom_rewrite_tag_rule', 10, 0);
+
+function taiapp_template_include($template) {
+    $code = get_query_var('taiapp_code');
+    if ($code) {
+        return get_template_directory() . '/template-taiapp.php';
+    }
+    return $template;
+}
+add_filter('template_include', 'taiapp_template_include');
