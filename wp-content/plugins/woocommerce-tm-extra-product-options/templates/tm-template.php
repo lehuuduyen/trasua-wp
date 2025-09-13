@@ -14,7 +14,6 @@
  */
 
 defined( 'ABSPATH' ) || exit;
-
 $tm_product = false;
 if ( ! empty( $tm_product_id ) ) {
 	$tm_product = wc_get_product( $tm_product_id );

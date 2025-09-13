@@ -12,7 +12,6 @@
  * @package Extra Product Options/Templates/Products
  * @version 6.4
  */
-
 defined( 'ABSPATH' ) || exit;
 
 if ( ! isset( $options ) ) {

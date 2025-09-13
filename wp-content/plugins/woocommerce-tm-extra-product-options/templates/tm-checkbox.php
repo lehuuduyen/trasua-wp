@@ -12,7 +12,6 @@
  * @package Extra Product Options/Templates
  * @version 6.4
  */
-
 defined( 'ABSPATH' ) || exit;
 if ( isset( $li_class, $label_to_display, $element_id, $replacement_mode, $border_type, $value, $name, $fieldtype, $use, $rules, $original_rules, $rules_type, $limit, $exactlimit, $minimumlimit, $image, $imagec, $imagep, $imagel, $image_variations, $checked, $swatch_position, $swatch_class ) ) :
 	$li_class         = (string) $li_class;
