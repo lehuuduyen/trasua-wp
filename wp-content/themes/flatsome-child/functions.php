@@ -162,8 +162,8 @@ add_shortcode( 'custom-mini-cart', 'custom_mini_cart' );
 add_filter( 'woocommerce_widget_cart_item_quantity', 'add_minicart_quantity_fields', 10, 3 );
 function add_minicart_quantity_fields( $html, $cart_item, $cart_item_key ) {
     $product_price = apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $cart_item['data'] ), $cart_item, $cart_item_key );
-
     return woocommerce_quantity_input( array('input_value' => $cart_item['quantity']), $cart_item['data'], false ) . $product_price;
+
 }
 
 function action_woocommerce_widget_shopping_cart_before_buttons(  ) { 
@@ -526,6 +526,7 @@ function fnShowDescriptionMeta(){
 add_action( 'wp_head' ,'fnShowDescriptionMeta',5);
 
 function fnCategoriesHome(){
+    
 	$page_id = get_queried_object_id();
     
 	ob_start();
@@ -537,10 +538,10 @@ function fnCategoriesHome(){
 	     $hinh_anh = get_sub_field('hinh_anh');
 	     $img_atts = wp_get_attachment_image_src($hinh_anh, 'thumbnail');
 	     
-         $danh_muc = get_sub_field('danh_muc')->term_id;
+         $danh_muc = get_sub_field('danh_muc');
         $hinh_anh = $img_atts[0];
 	    $tieu_de = $danh_muc->name;
-	    $link = $danh_muc;
+	    $link ='#danh_muc_' . $danh_muc->term_id ;
     ?>
         <div class="col">
 			<div class="col-inner">
@@ -577,3 +578,288 @@ function taiapp_template_include($template) {
     return $template;
 }
 add_filter('template_include', 'taiapp_template_include');
+
+
+
+// Thêm meta box cho sản phẩm
+add_action('add_meta_boxes', 'custom_product_html_meta_box');
+function custom_product_html_meta_box() {
+    add_meta_box(
+        'custom_product_html',               // ID
+        __('Thuộc tính cho sản phẩm', 'woocommerce'), // Tiêu đề box
+        'custom_product_html_callback',      // Callback
+        'product',                           // Post type
+        'advanced',                            // Vị trí
+        'high'                               // Ưu tiên
+    );
+}
+
+// Hiển thị textarea HTML
+function custom_product_html_callback($post) {
+    global $wpdb;
+
+    $value = get_post_meta($post->ID, '_custom_product_html', true);
+    $getAttributes = json_decode(get_post_meta($post->ID, 'list_attribute', true)) ;
+        
+    if(!$getAttributes){
+        $getAttributes =[];
+    }
+    $post_id = 1252; // ID sản phẩm cần lấy
+    $meta_key = 'tm_meta';
+    
+    // Lấy meta_value trong bảng wp_postmeta
+    $attribute = $wpdb->get_var(
+        $wpdb->prepare(
+            "SELECT meta_value FROM {$wpdb->postmeta} WHERE meta_key = %s",
+            // $post_id,
+            $meta_key
+        )
+    );
+    
+    $listTopping = [];
+    $listBigSize = [];
+    $result = [];
+    
+    if ($attribute) {
+        $listAttribute = unserialize($attribute)['tmfbuilder'];
+    
+        // ----- Size -----
+        $listTitleSize     = $listAttribute['multiple_radiobuttons_options_value'][0];
+        $listPriceSize     = $listAttribute['multiple_radiobuttons_options_price'][0];
+        $listSaleOffeSize  = $listAttribute['multiple_radiobuttons_options_sale_price'][0];
+        $listImage  = $listAttribute['multiple_radiobuttons_options_description'][0];
+
+    
+        foreach ($listTitleSize as $key => $value) {
+            $temp = [];
+            $temp['title']     = $value;
+            $temp['price']     = (int) $listPriceSize[$key];
+            $temp['priceSale'] = ($listSaleOffeSize[$key] != "") ? (int)$listSaleOffeSize[$key] : "";
+            $temp['path'] = $listImage[$key];
+            $temp['isCheck'] = in_array($value,$getAttributes)?true:false;
+
+            $listBigSize[]     = $temp;
+        }
+
+        // ----- Topping -----
+        $listTitleTopping    = $listAttribute['multiple_checkboxes_options_value'][0];
+        $listPriceTopping    = $listAttribute['multiple_checkboxes_options_price'][0];
+        $listSaleOffTopping  = $listAttribute['multiple_checkboxes_options_sale_price'][0];
+    
+        foreach ($listTitleTopping as $key => $value) {
+            $temp = [];
+            $temp['title']     = $value;
+            $temp['price']     = (int) $listPriceTopping[$key];
+            $temp['priceSale'] = ($listSaleOffTopping[$key] != "") ? (int)$listSaleOffTopping[$key] : "";
+            $temp['isCheck'] = in_array($value,$getAttributes)?true:false;
+
+            $listTopping[]     = $temp;
+        }
+    
+        $result['radio']['size']     = $listBigSize;
+        $result['checkbox']['topping'] = $listTopping;
+    
+        // ----- Suggar (nếu có) -----
+        if (isset($listAttribute['multiple_radiobuttons_options_value'][1])) {
+            $listSuggar = [];
+            $listTitleSuggar    = $listAttribute['multiple_radiobuttons_options_value'][1];
+            $listPriceSuggar    = $listAttribute['multiple_radiobuttons_options_price'][1];
+            $listSaleOffeSuggar = $listAttribute['multiple_radiobuttons_options_sale_price'][1];
+    
+            foreach ($listTitleSuggar as $key => $value) {
+                $temp = [];
+                $temp['title']     = $value;
+                $temp['price']     = (int)$listPriceSuggar[$key];
+                $temp['priceSale'] = ($listSaleOffeSuggar[$key] != "") ? (int)$listSaleOffeSuggar[$key] : "";
+                $temp['isCheck'] = in_array($value,$getAttributes)?true:false;
+
+                $listSuggar[]      = $temp;
+            }
+            $result['radio']['suggar'] = $listSuggar;
+        }
+    }
+    $html = '<style>.listattribute input[type="checkbox"],.listattribute input[type=checkbox]:checked::before {
+  appearance: none; /* ẩn giao diện mặc định */
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #555;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  color:white;
+  content:""
+}
+
+/* Khi được tick */
+.listattribute input[type="checkbox"]:checked::after {
+  content: "X";          /* hiện chữ X */
+  color: red;            /* màu đỏ */
+  font-weight: bold;
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  left: 4px;
+}</style>
+  <p> Khi check sẽ tự động ẩn không hiển thị ở app</p>
+    <div  style="position: relative;background: white;">
+        <div class="col-md-12 listattribute" style="border-bottom: 1px solid #CECECE;">';
+            
+            
+    foreach($result['radio'] as $key => $list){
+        $html .='<legend>'.$key.'</legend><div class="ml-20" style="display:inline-grid">';
+               $html.='<label>
+                  <input type="checkbox" class="checkAll"  onclick="checkAll(this)" >
+                  All 
+                </label>';
+              foreach($list as $value){
+                  $selected ="";
+                if($value["isCheck"]){
+                    $selected ="checked";
+                }
+
+                  $html.='<label>
+                  <input type="checkbox" class="input-check" name="listAttribute[]" '.$selected.' value="'.$value["title"].'">
+                  '.$value["title"].' : '.$value["price"].'
+                </label>';
+              }
+              $html .='</div>
+            <hr>';
+                
+      
+
+    }
+    foreach($result['checkbox'] as $key => $list){
+        $html.='<legend>'.$key.'</legend>
+              <div class="ml-20" style="display:inline-grid">';
+              $html.='<label>
+                  <input type="checkbox" class="checkAll" onclick="checkAll(this)" >
+                  All 
+                </label>';
+              foreach($list as $value){
+                   $selected ="";
+                if($value["isCheck"]){
+                    $selected ="checked";
+                }
+                  $html.='<label>
+                  <input type="checkbox" class="input-check" name="listAttribute[]" '.$selected.' value="'.$value["title"].'">
+                  '.$value["title"].'
+                </label>
+            
+               
+              
+            ';
+              }
+              $html.='</div>
+            <hr>';
+                
+      
+
+    }
+     $html .=' </div>
+       </div>
+    </div>
+    
+    <script>
+    function checkAll(el)
+    {
+        let parent = el.closest(".ml-20");
+
+          // tìm tất cả checkbox con trong box đó
+          let items = parent.querySelectorAll(".input-check");
+          items.forEach(cb => cb.checked = el.checked); 
+ 
+    
+    }
+    
+    </script>
+    
+    
+    
+    
+     ';
+    echo $html;
+    
+}
+
+add_action('woocommerce_process_product_meta', 'save_custom_product_html');
+function save_custom_product_html($post_id) {
+    if (isset($_POST['listAttribute'])) {
+       $list = wp_unslash($_POST['listAttribute']);
+       $json = json_encode($list, JSON_UNESCAPED_UNICODE);
+       
+       update_post_meta($post_id, 'list_attribute', $json);
+
+
+    }else{
+        delete_post_meta($post_id, 'list_attribute');
+
+        
+    }
+}
+
+add_action('save_post', function($post_id, $post, $update){
+    
+    if(isset($_POST['tm_meta_serialized']) && !empty($_POST['tm_meta_serialized'])){
+         $data = urldecode($_POST['tm_meta_serialized']);
+         $json = json_decode($data);
+         $listCheckBox = $json->tm_meta->tmfbuilder->multiple_radiobuttons_options_checkbox->{0};
+          $args = [
+            'limit' => -1, // -1 = lấy tất cả sản phẩm
+            'status' => 'publish', // chỉ lấy sản phẩm đang hiển thị
+        ];
+        
+        $products = wc_get_products($args);
+         foreach ($listCheckBox as $key => $checkbox){
+             if($checkbox ==true){
+                 $keyStt = count($listCheckBox) - $key;
+                 $title = $json->tm_meta->tmfbuilder->multiple_radiobuttons_options_title->{0}[count($json->tm_meta->tmfbuilder->multiple_radiobuttons_options_title->{0}) - $keyStt];
+                 foreach ($products as $product){
+                                update_post_meta($product->id, 'list_attribute', json_encode([$title], JSON_UNESCAPED_UNICODE));
+                         
+                    }
+                
+             }
+         }
+    }
+    
+
+}, 10, 3);
+add_action('admin_enqueue_scripts', function ($hook) {
+    global $pagenow;
+
+    if (
+        $pagenow === 'edit.php'
+        && isset( $_GET['page'], $_GET['action'], $_GET['post'])
+        && $_GET['page'] === 'tm-global-epo'
+        && $_GET['action'] === 'edit'
+        && $_GET['post'] == 587
+    ) {
+        
+        // Đầu tiên enqueue một script trống
+
+        // Sau đó add inline script
+         // Đảm bảo jQuery đã enqueue
+        wp_enqueue_script('jquery');
+
+        // Inline script sẽ được in ra ngay sau jquery.js
+        wp_add_inline_script('jquery', '
+            jQuery(function($){
+                document.addEventListener("click", function (e) {
+
+                  const btn = e.target.closest(".builder-panel-add");
+                  if (btn) {
+                    console.log("Matched button:", btn);
+                    $(".tm_cell_price").last().after(`
+                        <div class="my-checkbox-wrapper">
+                          <input type="checkbox" name="tm_meta[tmfbuilder][multiple_radiobuttons_options_checkbox][0][]" value="true">
+                          <label for="extraOption">Check ẩn </label>
+                        </div>
+                      `);
+                  }
+                });
+            });
+        ');
+    }
+});
+
