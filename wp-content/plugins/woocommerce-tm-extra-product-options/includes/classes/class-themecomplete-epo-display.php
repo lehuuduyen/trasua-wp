@@ -999,6 +999,18 @@ class THEMECOMPLETE_EPO_Display {
 		if ( ! $post_id ) {
 			$post_id = 0;
 		}
+		global $wpdb;
+
+    $getAttributes = json_decode(get_post_meta($post_id, 'list_attribute', true)) ;
+        
+    if(!$getAttributes){
+        $getAttributes =[];
+    }
+   
+    
+		
+		
+		
 		$columns = [];
 		for ( $x = 1; $x <= 100; $x++ ) {
 			$columns[ 'w' . $x ] = [ 'tcwidth tcwidth-' . $x, $x ];
@@ -1589,8 +1601,7 @@ class THEMECOMPLETE_EPO_Display {
 
 												$element_args         = apply_filters( 'wc_epo_display_template_args', array_merge( $element_args, $display ), $element, false, false, $element_type_counter[ $element['type'] ] );
 												$element_args['args'] = $element_args;
-
-												if ( 'variations' !== $element['type'] ) {
+                                                if ( 'variations' !== $element['type'] ) {
 													if ( $element['enabled'] ) {
 														wc_get_template(
 															'tm-builder-element-start.php',
@@ -1711,6 +1722,7 @@ class THEMECOMPLETE_EPO_Display {
 										$args['get_posted_key_count'] = count( $get_posted_name );
 
 										foreach ( $get_posted_name as $get_posted_key => $get_posted_value ) {
+										    
 											$field_counter          = 0;
 											$args['get_posted_key'] = $get_posted_key;
 
@@ -1730,8 +1742,22 @@ class THEMECOMPLETE_EPO_Display {
 											}
 
 											$args['field_obj'] = $field_obj;
+                                           
 
-											if ( 'variations' !== $element['type'] ) {
+											$choice_counter = 0;
+                                            $ii=0;
+                                            foreach ( $element['options'] as $value => $label ) {
+											  //duyenle
+											    if(in_array($label,$getAttributes)){
+											        $ii++;
+											        continue;
+											    }
+                                            }
+                                            
+                                            if(count($element['options'] ) == $ii){
+                                                continue;
+                                            }else{
+                                                if ( 'variations' !== $element['type'] ) {
 												if ( $element['enabled'] ) {
 													wc_get_template(
 														'tm-builder-element-start.php',
@@ -1741,10 +1767,13 @@ class THEMECOMPLETE_EPO_Display {
 													);
 												}
 											}
-
-											$choice_counter = 0;
-
+                                            }
 											foreach ( $element['options'] as $value => $label ) {
+											  //duyenle
+											    if(in_array($label,$getAttributes)){
+											        $ii++;
+											        continue;
+											    }
 												$connector_value = $value;
 												if ( isset( $element['connector'] ) && isset( $connectors[ 'c-' . sanitize_key( $element['connector'] ) ] ) ) {
 													$c_element_counter = $connectors[ 'c-' . sanitize_key( $element['connector'] ) ]['element_counter'];
@@ -1920,7 +1949,8 @@ class THEMECOMPLETE_EPO_Display {
 												++$field_counter;
 
 											}
-
+											 
+                                            
 											if ( 'variations' !== $element['type'] ) {
 												if ( $element['enabled'] ) {
 													wc_get_template(
@@ -2015,7 +2045,7 @@ class THEMECOMPLETE_EPO_Display {
 										}
 
 										$element_args = array_merge( $element_args, $display );
-										if ( 'variations' !== $element['type'] ) {
+									    if ( 'variations' !== $element['type'] ) {
 											if ( $element['enabled'] ) {
 												wc_get_template(
 													'tm-builder-element-start.php',

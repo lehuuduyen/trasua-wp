@@ -37,6 +37,7 @@ if ( isset( $li_class, $label_to_display, $element_id, $replacement_mode, $borde
 	$swatch_position  = (string) $swatch_position;
 	$swatch_class     = (string) $swatch_class;
 	$class_label      = ! empty( $class_label ) ? (string) $class_label : '';
+		
 	if ( ! isset( $is_separator ) ) {
 		$is_separator = false;
 	}
@@ -116,8 +117,10 @@ if ( isset( $li_class, $label_to_display, $element_id, $replacement_mode, $borde
 			'wc_element_input_args',
 			$input_args,
 			isset( $tm_element_settings ) && isset( $tm_element_settings['type'] ) ? $tm_element_settings['type'] : '',
-			isset( $args ) ? $args : [],
+			isset( $args ) ? $args : []
 		);
+	
+
 		echo '<span class="tc-input-wrap tc-epo-style-space">';
 		THEMECOMPLETE_EPO_HTML()->create_field( $input_args, true );
 		echo '</span>';
