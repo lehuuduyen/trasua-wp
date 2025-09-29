@@ -541,7 +541,7 @@ function fnCategoriesHome(){
          $danh_muc = get_sub_field('danh_muc');
         $hinh_anh = $img_atts[0];
 	    $tieu_de = $danh_muc->name;
-	    $link ='#danh_muc_' . $danh_muc->term_id ;
+	    $link ='#tab_' . $danh_muc->slug ;
     ?>
         <div class="col">
 			<div class="col-inner">
